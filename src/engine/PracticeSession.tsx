@@ -7,6 +7,7 @@ import { createProblemGenerator, hasProblemTemplate } from './generate';
 import { QuestionView } from './QuestionView';
 import type { QuestionStep } from './schema';
 import { Button } from '../components/ui/Button';
+import { HomeButton } from '../components/ui/HomeButton';
 import { Mascot } from '../design-system/Mascot';
 import { randomCopy } from '../design-system/copy';
 import { useT } from '../i18n/i18n';
@@ -73,8 +74,9 @@ export function PracticeSession({ onExit }: { onExit: () => void }) {
 
   return (
     <div className="mx-auto flex min-h-dvh max-w-2xl flex-col px-4 pb-28 pt-6">
-      <div className="flex items-center justify-between">
-        <span className="font-display text-sm font-bold uppercase tracking-wide text-ink/50">
+      <div className="flex items-center gap-3">
+        <HomeButton onClick={onExit} />
+        <span className="flex-1 font-display text-sm font-bold uppercase tracking-wide text-ink/50">
           {t('practice.label')}
         </span>
         <span className="text-sm text-ink/50">

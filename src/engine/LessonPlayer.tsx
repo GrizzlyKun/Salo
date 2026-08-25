@@ -6,6 +6,7 @@ import { isQuestion } from './schema';
 import { StepRenderer } from './StepRenderer';
 import { useLessonStore } from './useLessonStore';
 import { Button } from '../components/ui/Button';
+import { HomeButton } from '../components/ui/HomeButton';
 import { Mascot } from '../design-system/Mascot';
 import { randomCopy } from '../design-system/copy';
 import { useT } from '../i18n/i18n';
@@ -83,7 +84,12 @@ export function LessonPlayer({ lesson, onExit }: LessonPlayerProps) {
 
   return (
     <div className="mx-auto flex min-h-dvh max-w-2xl flex-col px-4 pb-28 pt-6">
-      <ProgressBar current={visibleCount} total={lesson.steps.length} />
+      <div className="flex items-center gap-3">
+        <HomeButton onClick={() => onExit?.()} />
+        <div className="flex-1">
+          <ProgressBar current={visibleCount} total={lesson.steps.length} />
+        </div>
+      </div>
 
       <div className="mt-6 flex-1 space-y-6">
         <AnimatePresence initial={false}>
