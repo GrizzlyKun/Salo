@@ -1,0 +1,90 @@
+{
+  "id": "desigualdades-en-la-recta",
+  "title": "Desigualdades en la recta",
+  "unitId": "recta-numerica",
+  "order": 4,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Una desigualdad no es un número: es toda una región de la recta.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "$x > 2$ no señala un número: señala un $montón$ de ellos. Todos los que superan al $2$. ✨"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": { "min": 0, "max": 6, "step": 1, "interval": { "from": 2, "to": 6, "openFrom": true } },
+      "caption": "El sombreado son todos los $x > 2$. El círculo hueco en el $2$ dice: 'yo no entro'."
+    },
+    {
+      "type": "question",
+      "id": "cumple-mayor-2",
+      "variant": "multiple-choice",
+      "prompt": "¿Cuál de estos números cumple $x > 2$?",
+      "choices": [
+        { "id": "a", "text": "$1$" },
+        { "id": "b", "text": "$2$" },
+        { "id": "c", "text": "$3$" }
+      ],
+      "answerId": "c",
+      "feedback": {
+        "correct": "¡Eso es! $3$ es mayor que $2$, así que cae dentro del sombreado.",
+        "incorrect": "Fíjate en el círculo hueco: $x > 2$ significa estrictamente mayor. ¿El $2$ cuenta?"
+      },
+      "hints": ["'Mayor que' no incluye al propio $2$.", "Busca un número que esté a la derecha del $2$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "El truco del círculo: $hueco$ significa que el extremo no entra ($>$ o $<$); $relleno$ significa que sí entra ($\\ge$ o $\\le$)."
+    },
+    {
+      "type": "question",
+      "id": "incluye-el-2",
+      "variant": "multiple-choice",
+      "prompt": "En $x \\ge 2$, ¿el número $2$ forma parte de la solución?",
+      "choices": [
+        { "id": "a", "text": "Sí, entra" },
+        { "id": "b", "text": "No, se queda fuera" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Correcto! El $\\ge$ incluye la igualdad, así que el $2$ entra: círculo relleno.",
+        "incorrect": "El símbolo $\\ge$ es 'mayor o igual'. Esa parte de 'o igual' incluye al propio $2$."
+      },
+      "hints": ["Lee $\\ge$ en voz alta: 'mayor o igual'.", "La parte 'o igual' es la que decide si el $2$ entra."]
+    },
+    {
+      "type": "widget",
+      "id": "lee-intervalo",
+      "widget": "number-line",
+      "props": { "min": -4, "max": 4, "step": 1, "interval": { "from": -4, "to": 1, "openTo": false } },
+      "caption": "Lee este sombreado: ¿qué desigualdad representa?"
+    },
+    {
+      "type": "question",
+      "id": "que-desigualdad",
+      "variant": "multiple-choice",
+      "prompt": "El sombreado llega hasta el $1$ con círculo relleno. ¿Qué desigualdad es?",
+      "choices": [
+        { "id": "a", "text": "$x < 1$" },
+        { "id": "b", "text": "$x \\le 1$" },
+        { "id": "c", "text": "$x \\ge 1$" }
+      ],
+      "answerId": "b",
+      "feedback": {
+        "correct": "¡Sí! Va hacia la izquierda (menores) e incluye al $1$ (relleno): $x \\le 1$.",
+        "incorrect": "El círculo está relleno, así que el $1$ entra. Y el sombreado va hacia los números menores."
+      },
+      "hints": ["¿Hacia qué lado va el sombreado, mayores o menores?", "Círculo relleno = incluye el extremo, así que lleva 'o igual'."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Ahora lees una desigualdad como un mapa: hacia dónde va y si el borde entra o no. 🎉"
+    }
+  ]
+}

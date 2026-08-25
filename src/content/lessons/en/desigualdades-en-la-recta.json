@@ -1,0 +1,90 @@
+{
+  "id": "desigualdades-en-la-recta",
+  "title": "Inequalities on the line",
+  "unitId": "recta-numerica",
+  "order": 4,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "An inequality isn't a single number: it's a whole region of the line.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "$x > 2$ doesn't point to one number: it points to a $bunch$ of them. All the ones bigger than $2$. ✨"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": { "min": 0, "max": 6, "step": 1, "interval": { "from": 2, "to": 6, "openFrom": true } },
+      "caption": "The shading is every $x > 2$. The hollow circle at $2$ says: 'I'm not included'."
+    },
+    {
+      "type": "question",
+      "id": "cumple-mayor-2",
+      "variant": "multiple-choice",
+      "prompt": "Which of these numbers satisfies $x > 2$?",
+      "choices": [
+        { "id": "a", "text": "$1$" },
+        { "id": "b", "text": "$2$" },
+        { "id": "c", "text": "$3$" }
+      ],
+      "answerId": "c",
+      "feedback": {
+        "correct": "That's it! $3$ is greater than $2$, so it falls inside the shading.",
+        "incorrect": "Notice the hollow circle: $x > 2$ means strictly greater. Does $2$ count?"
+      },
+      "hints": ["'Greater than' doesn't include $2$ itself.", "Look for a number to the right of $2$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "The circle trick: $hollow$ means the endpoint is not included ($>$ or $<$); $filled$ means it is ($\\ge$ or $\\le$)."
+    },
+    {
+      "type": "question",
+      "id": "incluye-el-2",
+      "variant": "multiple-choice",
+      "prompt": "In $x \\ge 2$, is the number $2$ part of the solution?",
+      "choices": [
+        { "id": "a", "text": "Yes, it's included" },
+        { "id": "b", "text": "No, it's left out" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Correct! The $\\ge$ includes equality, so $2$ is in: filled circle.",
+        "incorrect": "The symbol $\\ge$ is 'greater than or equal'. That 'or equal' part includes $2$ itself."
+      },
+      "hints": ["Read $\\ge$ out loud: 'greater than or equal'.", "The 'or equal' part decides whether $2$ is in."]
+    },
+    {
+      "type": "widget",
+      "id": "lee-intervalo",
+      "widget": "number-line",
+      "props": { "min": -4, "max": 4, "step": 1, "interval": { "from": -4, "to": 1, "openTo": false } },
+      "caption": "Read this shading: what inequality does it show?"
+    },
+    {
+      "type": "question",
+      "id": "que-desigualdad",
+      "variant": "multiple-choice",
+      "prompt": "The shading reaches $1$ with a filled circle. Which inequality is it?",
+      "choices": [
+        { "id": "a", "text": "$x < 1$" },
+        { "id": "b", "text": "$x \\le 1$" },
+        { "id": "c", "text": "$x \\ge 1$" }
+      ],
+      "answerId": "b",
+      "feedback": {
+        "correct": "Yes! It goes left (smaller values) and includes $1$ (filled): $x \\le 1$.",
+        "incorrect": "The circle is filled, so $1$ is included. And the shading heads toward smaller numbers."
+      },
+      "hints": ["Which way does the shading go, bigger or smaller?", "Filled circle = includes the endpoint, so it has 'or equal'."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Now you read an inequality like a map: which way it goes and whether the edge is in. 🎉"
+    }
+  ]
+}

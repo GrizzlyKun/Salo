@@ -1,0 +1,16 @@
+{
+  "id": "aritmetica-esencial",
+  "title": "Essential arithmetic",
+  "units": [
+    {
+      "id": "fracciones",
+      "title": "Fractions and decimals",
+      "lessonIds": ["sumar-fracciones", "fracciones-a-decimales"]
+    },
+    {
+      "id": "proporcionalidad",
+      "title": "Percentages",
+      "lessonIds": ["porcentajes-basicos"]
+    }
+  ]
+}

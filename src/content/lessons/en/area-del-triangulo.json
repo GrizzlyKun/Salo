@@ -1,0 +1,76 @@
+{
+  "id": "area-del-triangulo",
+  "title": "Area of a triangle",
+  "unitId": "areas",
+  "order": 1,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "A right triangle is half a rectangle: that's why you divide by two.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Cut a rectangle along its diagonal and you get two equal triangles. Each one is half. ✂️"
+    },
+    {
+      "type": "widget",
+      "id": "triangulo",
+      "widget": "geo-figure",
+      "props": { "shape": "right-triangle", "a": 4, "b": 3 },
+      "caption": "This right triangle is half of a $4$ by $3$ rectangle."
+    },
+    {
+      "type": "question",
+      "id": "mitad",
+      "variant": "multiple-choice",
+      "prompt": "The $4 \\times 3$ rectangle has area $12$. What is the area of the triangle?",
+      "choices": [
+        { "id": "a", "text": "$6$" },
+        { "id": "b", "text": "$12$" },
+        { "id": "c", "text": "$7$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! The triangle is half: $12 \\div 2 = 6$.",
+        "incorrect": "The triangle is half of the rectangle. What is half of $12$?"
+      },
+      "hints": ["The triangle fills half the rectangle.", "$12 \\div 2 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "Hence the formula: area of a triangle $= \\dfrac{\\text{base} \\times \\text{height}}{2}$."
+    },
+    {
+      "type": "question",
+      "id": "calcula",
+      "variant": "numeric-input",
+      "prompt": "What is the area of a triangle with base $6$ and height $4$?",
+      "answer": "12",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! $\\frac{6 \\times 4}{2} = \\frac{24}{2} = 12$.",
+        "incorrect": "Multiply base by height and divide by $2$: $\\frac{6 \\times 4}{2}$."
+      },
+      "hints": ["First $6 \\times 4 = 24$.", "Then divide by $2$."]
+    },
+    {
+      "type": "question",
+      "id": "transfiere",
+      "variant": "numeric-input",
+      "prompt": "What is the area of a triangle with base $10$ and height $5$?",
+      "answer": "25",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Great! $\\frac{10 \\times 5}{2} = 25$.",
+        "incorrect": "$10 \\times 5 = 50$; now divide by $2$."
+      },
+      "hints": ["$10 \\times 5 = 50$.", "$50 \\div 2 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Base times height over two. And the 'over two' is only because a triangle is half a rectangle. 🎉"
+    }
+  ]
+}

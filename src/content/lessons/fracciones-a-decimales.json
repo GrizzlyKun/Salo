@@ -1,0 +1,77 @@
+{
+  "id": "fracciones-a-decimales",
+  "title": "De fracción a decimal",
+  "unitId": "fracciones",
+  "order": 1,
+  "xp": 15,
+  "durationMinutes": 3,
+  "summary": "Una fracción es una división: divide arriba entre abajo y sale el decimal.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Una fracción es una división disfrazada: $\\frac{1}{4}$ significa '$1$ dividido entre $4$'. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "recta",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "labels": { "0": "0", "0.25": "0.25", "0.5": "0.5", "0.75": "0.75", "1": "1" }
+      },
+      "caption": "Cada cuarto avanza $0.25$ en la recta decimal."
+    },
+    {
+      "type": "question",
+      "id": "un-cuarto",
+      "variant": "numeric-input",
+      "prompt": "¿Qué decimal es $\\frac{1}{4}$?",
+      "answer": "0.25",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Eso es! $1 \\div 4 = 0.25$.",
+        "incorrect": "Divide $1$ entre $4$. En la recta, $\\frac{1}{4}$ cae en $0.25$."
+      },
+      "hints": ["Es $1 \\div 4$.", "Un cuarto de $1$ es $0.25$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "El método siempre funciona: divide el numerador entre el denominador y obtienes el decimal."
+    },
+    {
+      "type": "question",
+      "id": "tres-cuartos",
+      "variant": "numeric-input",
+      "prompt": "¿Qué decimal es $\\frac{3}{4}$?",
+      "answer": "0.75",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Perfecto! $3 \\div 4 = 0.75$.",
+        "incorrect": "Divide $3$ entre $4$: son tres cuartos, tres pasos de $0.25$."
+      },
+      "hints": ["$3 \\div 4$.", "Tres veces $0.25$."]
+    },
+    {
+      "type": "question",
+      "id": "dos-quintos",
+      "variant": "numeric-input",
+      "prompt": "¿Qué decimal es $\\frac{2}{5}$?",
+      "answer": "0.4",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Genial! $2 \\div 5 = 0.4$.",
+        "incorrect": "Divide $2$ entre $5$. Pista: $\\frac{1}{5} = 0.2$."
+      },
+      "hints": ["$\\frac{1}{5} = 0.2$.", "$2 \\div 5 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Fracción y decimal son dos idiomas para el mismo número. Dividir es el traductor. 🎉"
+    }
+  ]
+}

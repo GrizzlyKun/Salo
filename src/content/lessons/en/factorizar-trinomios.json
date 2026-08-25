@@ -1,0 +1,90 @@
+{
+  "id": "factorizar-trinomios",
+  "title": "Factoring trinomials",
+  "unitId": "algebra-factorizacion",
+  "order": 4,
+  "xp": 25,
+  "durationMinutes": 5,
+  "summary": "The way back: from x²+5x+6 to (x+2)(x+3), by finding two numbers.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "You already know how to build the area. Now go backwards: you're given the trinomial and you look for the $rectangle$ that forms it. ✨"
+    },
+    {
+      "type": "widget",
+      "id": "modelo",
+      "widget": "area-model",
+      "props": {
+        "top": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "side": [{ "label": "x", "size": 3 }, { "label": "2", "size": 2 }],
+        "cells": [["x²", "3x"], ["2x", "6"]]
+      },
+      "caption": "This rectangle has area $x^2 + 5x + 6$. What are its sides?"
+    },
+    {
+      "type": "question",
+      "id": "dos-numeros",
+      "variant": "multiple-choice",
+      "prompt": "To factor $x^2 + 5x + 6$ I look for two numbers that multiply to $6$ and add to $5$. Which are they?",
+      "choices": [
+        { "id": "a", "text": "$2$ and $3$" },
+        { "id": "b", "text": "$1$ and $6$" },
+        { "id": "c", "text": "$2$ and $4$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! $2 \\cdot 3 = 6$ and $2 + 3 = 5$. Exactly what it asked.",
+        "incorrect": "You need BOTH at once: multiply to $6$ and add to $5$. Try each pair."
+      },
+      "hints": ["List the pairs that multiply to $6$: $1\\cdot 6$ and $2\\cdot 3$.", "Which of those adds to $5$?"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "Those two numbers are the missing sides: $x^2 + 5x + 6 = (x+2)(x+3)$. They multiply to the bottom term and add to the middle one."
+    },
+    {
+      "type": "question",
+      "id": "factoriza-12",
+      "variant": "multiple-choice",
+      "templateId": "factorizar-trinomio",
+      "prompt": "Factor $x^2 + 7x + 12$.",
+      "choices": [
+        { "id": "a", "text": "$(x+3)(x+4)$" },
+        { "id": "b", "text": "$(x+2)(x+6)$" },
+        { "id": "c", "text": "$(x+1)(x+12)$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Perfect! $3 \\cdot 4 = 12$ and $3 + 4 = 7$.",
+        "incorrect": "The other pairs also multiply to $12$, but look for the one that ADDS to $7$."
+      },
+      "hints": ["Pairs that give $12$: $2\\cdot 6$, $3\\cdot 4$, $1\\cdot 12$.", "Which pair adds to $7$?"]
+    },
+    {
+      "type": "question",
+      "id": "factoriza-4",
+      "variant": "multiple-choice",
+      "templateId": "factorizar-trinomio",
+      "prompt": "Factor $x^2 + 5x + 4$.",
+      "choices": [
+        { "id": "a", "text": "$(x+1)(x+4)$" },
+        { "id": "b", "text": "$(x+2)(x+2)$" },
+        { "id": "c", "text": "$(x+4)(x+4)$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! $1 \\cdot 4 = 4$ and $1 + 4 = 5$.",
+        "incorrect": "$(x+2)(x+2)$ multiplies to $4$ but adds to $4$, not $5$. Find the right pair."
+      },
+      "hints": ["You need to multiply to $4$ and add to $5$.", "Try $1$ and $4$: do they satisfy both?"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Factoring a trinomial is a game of two clues: multiply and add. With practice you'll see it at a glance. 🎉"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "sumar-restar-con-signo",
+  "title": "Adding and subtracting with signs",
+  "unitId": "recta-numerica",
+  "order": 1,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Adding moves right; subtracting (or adding a negative) moves left.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "On the line, adding means stepping to the $right$ and subtracting means stepping to the $left$. Every calculation is a little trip. ✨"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": { "min": -6, "max": 6, "step": 1, "points": [{ "value": 0, "label": "0", "color": "#3EC6C9" }] },
+      "caption": "Pick a starting point and count steps one way or the other."
+    },
+    {
+      "type": "question",
+      "id": "cuatro-mas-menos-seis",
+      "variant": "numeric-input",
+      "prompt": "You start at $4$ and add $-6$. Where do you land?",
+      "answer": "-2",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "That's it! Adding $-6$ means moving $6$ steps left: from $4$ you reach $-2$.",
+        "incorrect": "Adding a negative moves you left. From $4$, count $6$ steps that way."
+      },
+      "hints": ["Adding a negative number = moving left.", "From $4$: $3, 2, 1, 0, -1, -2$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "There's the trick: adding a negative is the same as subtracting. Both push you to the left."
+    },
+    {
+      "type": "question",
+      "id": "menos-tres-mas-cinco",
+      "variant": "multiple-choice",
+      "prompt": "What is $-3 + 5$?",
+      "choices": [
+        { "id": "a", "text": "$2$" },
+        { "id": "b", "text": "$-2$" },
+        { "id": "c", "text": "$8$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Perfect! From $-3$, five steps to the right land you on $2$.",
+        "incorrect": "Start at $-3$ and move $5$ to the right, crossing zero. Where do you end up?"
+      },
+      "hints": ["Adding $5$ means going right from $-3$.", "From $-3$ to $0$ is $3$ steps; $2$ remain."]
+    },
+    {
+      "type": "question",
+      "id": "menos-dos-menos-tres",
+      "variant": "numeric-input",
+      "prompt": "What is $-2 - 3$?",
+      "answer": "-5",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Yes! You were at $-2$ and subtracting $3$ pushes you further left: $-5$.",
+        "incorrect": "Subtracting always goes left. If you're already negative, you sink deeper."
+      },
+      "hints": ["From $-2$, three more steps to the left.", "$-2, -3, -4, -5$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Adding and subtracting stop being strange rules once you see them as steps on the line. 🎉"
+    }
+  ]
+}

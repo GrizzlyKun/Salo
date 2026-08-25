@@ -1,0 +1,88 @@
+{
+  "id": "distributiva-area",
+  "title": "Multiplicar sumas con áreas",
+  "unitId": "algebra-factorizacion",
+  "order": 0,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Ver (x+3)(x+2) como el área de un rectángulo lo vuelve casi obvio.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Multiplicar dos sumas parece lioso, pero es solo el $área$ de un rectángulo partido en trozos. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "modelo",
+      "widget": "area-model",
+      "props": {
+        "top": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "side": [{ "label": "x", "size": 3 }, { "label": "2", "size": 2 }],
+        "cells": [["x²", "3x"], ["2x", "6"]]
+      },
+      "caption": "Un rectángulo de $(x+3)$ por $(x+2)$, partido en cuatro piezas."
+    },
+    {
+      "type": "question",
+      "id": "pieza-esquina",
+      "variant": "multiple-choice",
+      "prompt": "La pieza de arriba a la izquierda mide $x$ por $x$. ¿Cuál es su área?",
+      "choices": [
+        { "id": "a", "text": "$x^2$" },
+        { "id": "b", "text": "$2x$" },
+        { "id": "c", "text": "$x$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! Lado por lado: $x \\cdot x = x^2$.",
+        "incorrect": "El área de un rectángulo es lado por lado. Aquí ambos lados miden $x$."
+      },
+      "hints": ["Área = un lado por el otro.", "$x \\cdot x = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "El área total es la suma de las cuatro piezas: $x^2 + 3x + 2x + 6$. Multiplicar sumas es solo repartir el área."
+    },
+    {
+      "type": "question",
+      "id": "junta-terminos",
+      "variant": "multiple-choice",
+      "prompt": "Junta los términos parecidos: $x^2 + 3x + 2x + 6$ es…",
+      "choices": [
+        { "id": "a", "text": "$x^2 + 5x + 6$" },
+        { "id": "b", "text": "$x^2 + 6x + 6$" },
+        { "id": "c", "text": "$x^2 + 6$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Perfecto! $3x + 2x = 5x$, así que queda $x^2 + 5x + 6$.",
+        "incorrect": "Solo se juntan los términos con $x$: $3x + 2x$. Los demás se quedan como están."
+      },
+      "hints": ["$3x$ y $2x$ se pueden juntar.", "$3x + 2x = 5x$; el $x^2$ y el $6$ no se tocan."]
+    },
+    {
+      "type": "question",
+      "id": "transfiere",
+      "variant": "multiple-choice",
+      "prompt": "Sin dibujar, en $(x+1)(x+4)$, ¿cuánto suma el término del medio (los $x$)?",
+      "choices": [
+        { "id": "a", "text": "$5x$" },
+        { "id": "b", "text": "$4x$" },
+        { "id": "c", "text": "$5$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Genial! Las piezas del medio son $1x$ y $4x$: juntas, $5x$.",
+        "incorrect": "El medio son las dos piezas rectangulares: $1 \\cdot x$ y $4 \\cdot x$. Súmalas."
+      },
+      "hints": ["Son las piezas 'mezcladas': número por $x$.", "$1x + 4x = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Multiplicar $(a+b)(c+d)$ es repartir un área en cuatro. Con esa imagen ya no se te escapa ningún término. 🎉"
+    }
+  ]
+}

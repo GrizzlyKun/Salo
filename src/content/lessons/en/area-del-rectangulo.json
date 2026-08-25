@@ -1,0 +1,76 @@
+{
+  "id": "area-del-rectangulo",
+  "title": "Area of a rectangle",
+  "unitId": "areas",
+  "order": 0,
+  "xp": 15,
+  "durationMinutes": 3,
+  "summary": "Count the squares... or multiply base by height and skip the counting.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "How many square tiles fit on the floor? That count is the area. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "rejilla",
+      "widget": "geo-figure",
+      "props": { "shape": "rectangle", "a": 4, "b": 3, "grid": true },
+      "caption": "A rectangle of $4$ by $3$, split into squares of side $1$."
+    },
+    {
+      "type": "question",
+      "id": "cuenta",
+      "variant": "numeric-input",
+      "prompt": "How many unit squares are there in total?",
+      "answer": "12",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "That's it! $4$ columns of $3$ squares: $12$ in total.",
+        "incorrect": "Count by rows or columns: $4$ wide by $3$ tall."
+      },
+      "hints": ["Count one row and multiply by the number of rows.", "$4 \\times 3 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "No need to count one by one: the area of a rectangle is $\\text{base} \\times \\text{height}$."
+    },
+    {
+      "type": "question",
+      "id": "otra",
+      "variant": "numeric-input",
+      "prompt": "What is the area of a rectangle with base $7$ and height $3$?",
+      "answer": "21",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! $7 \\times 3 = 21$.",
+        "incorrect": "Multiply base by height: $7 \\times 3$."
+      },
+      "hints": ["Area $=$ base $\\times$ height.", "$7 \\times 3 = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "inversa",
+      "variant": "multiple-choice",
+      "prompt": "A rectangle has area $12$ and base $4$. What is its height?",
+      "choices": [
+        { "id": "a", "text": "$3$" },
+        { "id": "b", "text": "$8$" },
+        { "id": "c", "text": "$48$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! If base $\\times$ height $= 12$ and the base is $4$, the height is $12 \\div 4 = 3$.",
+        "incorrect": "Undo the multiplication: divide the area by the base."
+      },
+      "hints": ["$\\text{base} \\times \\text{height} = \\text{area}$.", "$12 \\div 4 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Base times height: a formula that comes straight from counting squares. 🎉"
+    }
+  ]
+}

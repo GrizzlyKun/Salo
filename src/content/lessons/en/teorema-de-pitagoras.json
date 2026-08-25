@@ -1,0 +1,76 @@
+{
+  "id": "teorema-de-pitagoras",
+  "title": "The Pythagorean theorem",
+  "unitId": "triangulos",
+  "order": 0,
+  "xp": 25,
+  "durationMinutes": 5,
+  "summary": "In a right triangle, the legs predict the hypotenuse: a² + b² = c².",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "In a right triangle, the two short sides (the legs) decide exactly how long the long side (the hypotenuse) is. ✨"
+    },
+    {
+      "type": "widget",
+      "id": "triangulo",
+      "widget": "geo-figure",
+      "props": { "shape": "right-triangle", "a": 4, "b": 3, "hypotenuse": true, "labels": { "a": "4", "b": "3", "c": "c" } },
+      "caption": "Legs $3$ and $4$. How long is the hypotenuse $c$?"
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "The theorem: $a^2 + b^2 = c^2$. The square of the hypotenuse is the sum of the squares of the legs."
+    },
+    {
+      "type": "question",
+      "id": "tres-cuatro",
+      "variant": "multiple-choice",
+      "prompt": "With legs $3$ and $4$: $c^2 = 3^2 + 4^2 = 9 + 16 = 25$. So what is $c$?",
+      "choices": [
+        { "id": "a", "text": "$5$" },
+        { "id": "b", "text": "$7$" },
+        { "id": "c", "text": "$25$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! $c^2 = 25$, so $c = \\sqrt{25} = 5$.",
+        "incorrect": "$c^2 = 25$, but they ask for $c$, not $c^2$. What number squared gives $25$?"
+      },
+      "hints": ["Don't add $3+4$: square them and add.", "$c = \\sqrt{25}$."]
+    },
+    {
+      "type": "question",
+      "id": "seis-ocho",
+      "variant": "numeric-input",
+      "prompt": "A right triangle has legs $6$ and $8$. How long is the hypotenuse?",
+      "answer": "10",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! $36 + 64 = 100$, and $\\sqrt{100} = 10$.",
+        "incorrect": "Compute $6^2 + 8^2$ and then the square root of the result."
+      },
+      "hints": ["$6^2 + 8^2 = 36 + 64$.", "$\\sqrt{100} = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "cinco-doce",
+      "variant": "numeric-input",
+      "prompt": "Legs $5$ and $12$. How long is the hypotenuse?",
+      "answer": "13",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Great! $25 + 144 = 169$, and $\\sqrt{169} = 13$.",
+        "incorrect": "Add $5^2 + 12^2$ and take the square root."
+      },
+      "hints": ["$5^2 + 12^2 = 25 + 144$.", "$\\sqrt{169} = 13$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Two legs, one calculation: square them, add, and take the root. Pythagoras shows up everywhere. 🎉"
+    }
+  ]
+}

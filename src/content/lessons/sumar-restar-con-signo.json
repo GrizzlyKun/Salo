@@ -1,0 +1,76 @@
+{
+  "id": "sumar-restar-con-signo",
+  "title": "Sumar y restar con signo",
+  "unitId": "recta-numerica",
+  "order": 1,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Sumar es moverse a la derecha; restar (o sumar un negativo), a la izquierda.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "En la recta, sumar es dar pasos a la $derecha$ y restar es darlos a la $izquierda$. Cada cuenta es un pequeño viaje. ✨"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": { "min": -6, "max": 6, "step": 1, "points": [{ "value": 0, "label": "0", "color": "#3EC6C9" }] },
+      "caption": "Elige un punto de salida y cuenta pasos hacia un lado u otro."
+    },
+    {
+      "type": "question",
+      "id": "cuatro-mas-menos-seis",
+      "variant": "numeric-input",
+      "prompt": "Empiezas en $4$ y sumas $-6$. ¿Dónde caes?",
+      "answer": "-2",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Eso es! Sumar $-6$ es moverse $6$ pasos a la izquierda: de $4$ llegas a $-2$.",
+        "incorrect": "Sumar un negativo te mueve a la izquierda. Desde $4$, cuenta $6$ pasos hacia allá."
+      },
+      "hints": ["Sumar un número negativo = moverse a la izquierda.", "Desde $4$: $3, 2, 1, 0, -1, -2$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "Ahí está el truco: sumar un negativo es lo mismo que restar. Los dos te empujan hacia la izquierda."
+    },
+    {
+      "type": "question",
+      "id": "menos-tres-mas-cinco",
+      "variant": "multiple-choice",
+      "prompt": "¿Cuánto es $-3 + 5$?",
+      "choices": [
+        { "id": "a", "text": "$2$" },
+        { "id": "b", "text": "$-2$" },
+        { "id": "c", "text": "$8$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Perfecto! Desde $-3$, cinco pasos a la derecha te llevan al $2$.",
+        "incorrect": "Empieza en $-3$ y muévete $5$ a la derecha, cruzando el cero. ¿Dónde acabas?"
+      },
+      "hints": ["Sumar $5$ es ir a la derecha desde $-3$.", "De $-3$ al $0$ hay $3$ pasos; te quedan $2$."]
+    },
+    {
+      "type": "question",
+      "id": "menos-dos-menos-tres",
+      "variant": "numeric-input",
+      "prompt": "¿Cuánto es $-2 - 3$?",
+      "answer": "-5",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Sí! Ya estabas en $-2$ y restar $3$ te aleja más a la izquierda: $-5$.",
+        "incorrect": "Restar siempre va a la izquierda. Si ya estás en negativo, te hundes más."
+      },
+      "hints": ["Desde $-2$, tres pasos más a la izquierda.", "$-2, -3, -4, -5$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Sumar y restar dejan de ser reglas raras cuando los ves como pasos en la recta. 🎉"
+    }
+  ]
+}

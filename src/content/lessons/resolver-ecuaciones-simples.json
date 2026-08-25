@@ -1,0 +1,82 @@
+{
+  "id": "resolver-ecuaciones-simples",
+  "title": "Resolver ecuaciones",
+  "unitId": "ecuaciones-potencias",
+  "order": 0,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Despeja la incógnita deshaciendo lo que le hicieron, en ambos lados.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Una ecuación es una balanza en equilibrio: lo que hay a un lado del $=$ pesa igual que lo del otro. ⚖️"
+    },
+    {
+      "type": "exposition",
+      "id": "idea",
+      "text": "Para dejar la $x$ sola, deshaz lo que le hicieron. Y lo que hagas a un lado, hazlo también al otro: la balanza sigue equilibrada."
+    },
+    {
+      "type": "question",
+      "id": "suma",
+      "variant": "numeric-input",
+      "prompt": "Si $x + 5 = 12$, ¿cuánto vale $x$?",
+      "answer": "7",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Eso es! Restas $5$ en ambos lados: $x = 12 - 5 = 7$.",
+        "incorrect": "El $+5$ estorba. ¿Qué operación lo deshace? Aplícala a los dos lados."
+      },
+      "hints": ["Lo contrario de sumar $5$ es restar $5$.", "$12 - 5 = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "que-operacion",
+      "variant": "multiple-choice",
+      "prompt": "Para resolver $x - 4 = 10$, ¿qué haces a ambos lados?",
+      "choices": [
+        { "id": "a", "text": "Sumar $4$" },
+        { "id": "b", "text": "Restar $4$" },
+        { "id": "c", "text": "Multiplicar por $4$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Sí! Sumar $4$ deshace el $-4$: $x = 14$.",
+        "incorrect": "Piensa qué operación cancela el $-4$. Lo contrario de restar es sumar."
+      },
+      "hints": ["¿Qué operación es la inversa de restar?"]
+    },
+    {
+      "type": "question",
+      "id": "producto",
+      "variant": "numeric-input",
+      "prompt": "Si $3x = 21$, ¿cuánto vale $x$?",
+      "answer": "7",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Perfecto! Divides entre $3$ en ambos lados: $x = 21 \\div 3 = 7$.",
+        "incorrect": "Aquí la $x$ está multiplicada por $3$. Deshazlo dividiendo entre $3$."
+      },
+      "hints": ["Lo contrario de multiplicar por $3$ es dividir entre $3$.", "$21 \\div 3 = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "division",
+      "variant": "numeric-input",
+      "prompt": "Si $\\frac{x}{2} = 6$, ¿cuánto vale $x$?",
+      "answer": "12",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Genial! Multiplicas por $2$ en ambos lados: $x = 12$.",
+        "incorrect": "La $x$ está dividida entre $2$. Deshazlo multiplicando por $2$."
+      },
+      "hints": ["Lo contrario de dividir entre $2$ es multiplicar por $2$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Resolver es un juego de deshacer: identifica qué le hicieron a la $x$ y aplica la operación inversa a los dos lados. 🎉"
+    }
+  ]
+}

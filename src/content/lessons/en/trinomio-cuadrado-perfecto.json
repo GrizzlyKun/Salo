@@ -1,0 +1,89 @@
+{
+  "id": "trinomio-cuadrado-perfecto",
+  "title": "The square of a sum",
+  "unitId": "algebra-factorizacion",
+  "order": 3,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Why (x+3)² isn't x²+9, told with a square split into pieces.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Classic trap: many people think $(x+3)^2 = x^2 + 9$. Let's use the pieces to see why something is missing. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "modelo",
+      "widget": "area-model",
+      "props": {
+        "top": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "side": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "cells": [["x²", "3x"], ["3x", "9"]]
+      },
+      "caption": "A square of side $(x+3)$. Notice: it's four pieces, not two."
+    },
+    {
+      "type": "question",
+      "id": "que-falta",
+      "variant": "multiple-choice",
+      "prompt": "Besides the $x^2$ and the $9$, what other pieces appear?",
+      "choices": [
+        { "id": "a", "text": "Two rectangles of $3x$" },
+        { "id": "b", "text": "Nothing else" },
+        { "id": "c", "text": "A single $x$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! Those two $3x$ pieces are exactly what people forget.",
+        "incorrect": "Count the pieces in the picture: there are four, not two. What's between the $x^2$ and the $9$?"
+      },
+      "hints": ["The square has four pieces.", "The two 'mixed' pieces are $3x$ each."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "That's why $(a+b)^2 = a^2 + 2ab + b^2$. That $2ab$ is the two rectangular pieces that were missing."
+    },
+    {
+      "type": "question",
+      "id": "desarrolla",
+      "variant": "multiple-choice",
+      "templateId": "binomio-cuadrado-perfecto",
+      "prompt": "So what is $(x+3)^2$?",
+      "choices": [
+        { "id": "a", "text": "$x^2 + 6x + 9$" },
+        { "id": "b", "text": "$x^2 + 9$" },
+        { "id": "c", "text": "$x^2 + 3x + 9$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Perfect! The two $3x$ pieces add to $6x$: $x^2 + 6x + 9$.",
+        "incorrect": "Don't forget the two middle pieces: $3x + 3x = 6x$."
+      },
+      "hints": ["Add the two $3x$ pieces.", "$x^2 + 3x + 3x + 9$."]
+    },
+    {
+      "type": "question",
+      "id": "transfiere",
+      "variant": "multiple-choice",
+      "prompt": "In $(x+5)^2$, what is the middle term?",
+      "choices": [
+        { "id": "a", "text": "$10x$" },
+        { "id": "b", "text": "$5x$" },
+        { "id": "c", "text": "$25$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! Two pieces of $5x$: $10x$ in total (the $2ab$ with $a=x$, $b=5$).",
+        "incorrect": "The middle term is $2ab$: two times $5 \\cdot x$."
+      },
+      "hints": ["There are two equal pieces of $5x$.", "$2 \\cdot 5 \\cdot x = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "The square of a sum never misses its middle. Remember the four-piece square and you won't fall for the trap. 🎉"
+    }
+  ]
+}

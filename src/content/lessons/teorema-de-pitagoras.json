@@ -1,0 +1,76 @@
+{
+  "id": "teorema-de-pitagoras",
+  "title": "El teorema de Pitágoras",
+  "unitId": "triangulos",
+  "order": 0,
+  "xp": 25,
+  "durationMinutes": 5,
+  "summary": "En un triángulo rectángulo, los catetos predicen la hipotenusa: a² + b² = c².",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "En un triángulo rectángulo, los dos lados cortos (catetos) deciden exactamente cuánto mide el lado largo (hipotenusa). ✨"
+    },
+    {
+      "type": "widget",
+      "id": "triangulo",
+      "widget": "geo-figure",
+      "props": { "shape": "right-triangle", "a": 4, "b": 3, "hypotenuse": true, "labels": { "a": "4", "b": "3", "c": "c" } },
+      "caption": "Catetos $3$ y $4$. ¿Cuánto mide la hipotenusa $c$?"
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "El teorema: $a^2 + b^2 = c^2$. El cuadrado de la hipotenusa es la suma de los cuadrados de los catetos."
+    },
+    {
+      "type": "question",
+      "id": "tres-cuatro",
+      "variant": "multiple-choice",
+      "prompt": "Con catetos $3$ y $4$: $c^2 = 3^2 + 4^2 = 9 + 16 = 25$. Entonces, ¿cuánto vale $c$?",
+      "choices": [
+        { "id": "a", "text": "$5$" },
+        { "id": "b", "text": "$7$" },
+        { "id": "c", "text": "$25$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! $c^2 = 25$, así que $c = \\sqrt{25} = 5$.",
+        "incorrect": "$c^2 = 25$, pero te piden $c$, no $c^2$. ¿Qué número al cuadrado da $25$?"
+      },
+      "hints": ["No sumes $3+4$: eleva al cuadrado y suma.", "$c = \\sqrt{25}$."]
+    },
+    {
+      "type": "question",
+      "id": "seis-ocho",
+      "variant": "numeric-input",
+      "prompt": "Un triángulo rectángulo tiene catetos $6$ y $8$. ¿Cuánto mide la hipotenusa?",
+      "answer": "10",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Perfecto! $36 + 64 = 100$, y $\\sqrt{100} = 10$.",
+        "incorrect": "Calcula $6^2 + 8^2$ y luego la raíz cuadrada del resultado."
+      },
+      "hints": ["$6^2 + 8^2 = 36 + 64$.", "$\\sqrt{100} = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "cinco-doce",
+      "variant": "numeric-input",
+      "prompt": "Catetos $5$ y $12$. ¿Cuánto mide la hipotenusa?",
+      "answer": "13",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Genial! $25 + 144 = 169$, y $\\sqrt{169} = 13$.",
+        "incorrect": "Suma $5^2 + 12^2$ y saca la raíz cuadrada."
+      },
+      "hints": ["$5^2 + 12^2 = 25 + 144$.", "$\\sqrt{169} = 13$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Dos catetos, una cuenta: eleva al cuadrado, suma y saca la raíz. Pitágoras aparece por todas partes. 🎉"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "numeros-negativos",
+  "title": "Números negativos",
+  "unitId": "recta-numerica",
+  "order": 0,
+  "xp": 15,
+  "durationMinutes": 3,
+  "summary": "Lo que hay a la izquierda del cero, y por qué −5 es menor que −2.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "¿Puede algo valer $menos$ que nada? En un termómetro en invierno, sí: $-3$ grados es más frío que $0$. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": { "min": -5, "max": 5, "step": 1, "points": [{ "value": 0, "label": "0", "color": "#3EC6C9" }] },
+      "caption": "A la derecha del $0$, lo de siempre. A la izquierda, los negativos."
+    },
+    {
+      "type": "question",
+      "id": "coloca-menos-3",
+      "variant": "manipulative",
+      "prompt": "Coloca el marcador sobre $-3$.",
+      "widget": "number-line",
+      "props": { "min": -5, "max": 5, "step": 1, "interactive": true, "initial": 0 },
+      "answer": "-3",
+      "feedback": {
+        "correct": "¡Ahí está! $-3$ está tres pasos a la izquierda del cero.",
+        "incorrect": "Los negativos van a la izquierda del $0$. Cuenta tres pasos hacia allá."
+      },
+      "hints": ["¿Hacia qué lado del $0$ viven los negativos?", "Tres pasos a la izquierda desde el $0$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "En la recta, más a la izquierda significa $menor$. Por eso $-5$ está por debajo de $-2$: cuanto más frío, más pequeño el número."
+    },
+    {
+      "type": "question",
+      "id": "menor-negativo",
+      "variant": "multiple-choice",
+      "prompt": "¿Cuál es el número $menor$?",
+      "choices": [
+        { "id": "a", "text": "$-5$" },
+        { "id": "b", "text": "$-2$" },
+        { "id": "c", "text": "$0$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! $-5$ está más a la izquierda, así que es el menor.",
+        "incorrect": "Ojo: con negativos, el que parece 'más grande' es en realidad menor. ¿Cuál queda más a la izquierda?"
+      },
+      "hints": ["No te fíes del tamaño del número, mira su posición.", "El menor es el que está más a la izquierda en la recta."]
+    },
+    {
+      "type": "question",
+      "id": "dos-a-la-izquierda",
+      "variant": "numeric-input",
+      "prompt": "Si empiezas en $1$ y das $3$ pasos a la izquierda, ¿en qué número caes?",
+      "answer": "-2",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Perfecto! $1 \\to 0 \\to -1 \\to -2$. Cruzaste el cero sin miedo.",
+        "incorrect": "Ve contando de uno en uno hacia la izquierda desde el $1$, y no te pares en el $0$."
+      },
+      "hints": ["Cada paso a la izquierda resta $1$.", "Desde $1$: $0$, luego $-1$, luego…"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Ya tienes toda la recta, no solo la mitad. Los negativos son posiciones, igual de reales que los positivos. 🎉"
+    }
+  ]
+}

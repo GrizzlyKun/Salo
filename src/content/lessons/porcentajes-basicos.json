@@ -1,0 +1,81 @@
+{
+  "id": "porcentajes-basicos",
+  "title": "Porcentajes",
+  "unitId": "proporcionalidad",
+  "order": 0,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Por ciento significa 'de cada cien'. Con eso calculas el % de cualquier número.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "'Por ciento' significa literalmente 'de cada cien'. Un $50\\%$ es $50$ de cada $100$. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "recta",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 100,
+        "step": 25,
+        "labels": { "0": "0%", "25": "25%", "50": "50%", "75": "75%", "100": "100%" }
+      },
+      "caption": "El $50\\%$ está justo a la mitad; el $25\\%$, a un cuarto."
+    },
+    {
+      "type": "question",
+      "id": "equivale",
+      "variant": "multiple-choice",
+      "prompt": "¿A qué fracción equivale el $50\\%$?",
+      "choices": [
+        { "id": "a", "text": "$\\frac{1}{2}$" },
+        { "id": "b", "text": "$\\frac{1}{5}$" },
+        { "id": "c", "text": "$50$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Sí! $50$ de cada $100$ es la mitad: $\\frac{50}{100} = \\frac{1}{2}$.",
+        "incorrect": "$50\\%$ es $\\frac{50}{100}$. Simplifica esa fracción."
+      },
+      "hints": ["$50\\% = \\frac{50}{100}$.", "¿Cuánto es la mitad?"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "Para el $X\\%$ de un número $N$, multiplica $N$ por $\\frac{X}{100}$. Así de simple."
+    },
+    {
+      "type": "question",
+      "id": "veinticinco",
+      "variant": "numeric-input",
+      "prompt": "¿Cuánto es el $25\\%$ de $80$?",
+      "answer": "20",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Eso es! $25\\%$ es un cuarto: $80 \\div 4 = 20$.",
+        "incorrect": "El $25\\%$ es $\\frac{1}{4}$. Divide $80$ entre $4$."
+      },
+      "hints": ["$25\\% = \\frac{1}{4}$.", "$80 \\div 4 = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "diez",
+      "variant": "numeric-input",
+      "prompt": "¿Cuánto es el $10\\%$ de $250$?",
+      "answer": "25",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Genial! El $10\\%$ es dividir entre $10$: $250 \\div 10 = 25$.",
+        "incorrect": "El $10\\%$ de algo es ese número entre $10$."
+      },
+      "hints": ["$10\\% = \\frac{1}{10}$.", "$250 \\div 10 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Truco mental: el $10\\%$ es correr la coma un lugar. Y muchos porcentajes salen de ahí. 🎉"
+    }
+  ]
+}

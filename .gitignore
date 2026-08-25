@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+dev-dist
+*.local
+.DS_Store
+.vite
+coverage
+*.log
+
+# Ajustes locales de Claude Code (personales, no compartir)
+.claude/settings.local.json

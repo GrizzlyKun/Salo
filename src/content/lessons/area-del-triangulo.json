@@ -1,0 +1,76 @@
+{
+  "id": "area-del-triangulo",
+  "title": "Área del triángulo",
+  "unitId": "areas",
+  "order": 1,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Un triángulo rectángulo es medio rectángulo: por eso se divide entre dos.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Corta un rectángulo por su diagonal y tendrás dos triángulos iguales. Cada uno es la mitad. ✂️"
+    },
+    {
+      "type": "widget",
+      "id": "triangulo",
+      "widget": "geo-figure",
+      "props": { "shape": "right-triangle", "a": 4, "b": 3 },
+      "caption": "Este triángulo rectángulo es la mitad de un rectángulo de $4$ por $3$."
+    },
+    {
+      "type": "question",
+      "id": "mitad",
+      "variant": "multiple-choice",
+      "prompt": "El rectángulo de $4 \\times 3$ tiene área $12$. ¿Cuál es el área del triángulo?",
+      "choices": [
+        { "id": "a", "text": "$6$" },
+        { "id": "b", "text": "$12$" },
+        { "id": "c", "text": "$7$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! El triángulo es la mitad: $12 \\div 2 = 6$.",
+        "incorrect": "El triángulo es la mitad del rectángulo. ¿Cuánto es la mitad de $12$?"
+      },
+      "hints": ["El triángulo ocupa la mitad del rectángulo.", "$12 \\div 2 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "De ahí la fórmula: área del triángulo $= \\dfrac{\\text{base} \\times \\text{altura}}{2}$."
+    },
+    {
+      "type": "question",
+      "id": "calcula",
+      "variant": "numeric-input",
+      "prompt": "¿Cuál es el área de un triángulo de base $6$ y altura $4$?",
+      "answer": "12",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Perfecto! $\\frac{6 \\times 4}{2} = \\frac{24}{2} = 12$.",
+        "incorrect": "Multiplica base por altura y divide entre $2$: $\\frac{6 \\times 4}{2}$."
+      },
+      "hints": ["Primero $6 \\times 4 = 24$.", "Luego divide entre $2$."]
+    },
+    {
+      "type": "question",
+      "id": "transfiere",
+      "variant": "numeric-input",
+      "prompt": "¿Cuál es el área de un triángulo de base $10$ y altura $5$?",
+      "answer": "25",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Genial! $\\frac{10 \\times 5}{2} = 25$.",
+        "incorrect": "$10 \\times 5 = 50$; ahora divide entre $2$."
+      },
+      "hints": ["$10 \\times 5 = 50$.", "$50 \\div 2 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Base por altura entre dos. Y el 'entre dos' es solo porque un triángulo es medio rectángulo. 🎉"
+    }
+  ]
+}

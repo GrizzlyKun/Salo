@@ -1,0 +1,33 @@
+{
+  "id": "algebra-esencial",
+  "title": "Álgebra esencial",
+  "units": [
+    {
+      "id": "recta-numerica",
+      "title": "La recta numérica",
+      "lessonIds": [
+        "numeros-negativos",
+        "sumar-restar-con-signo",
+        "fracciones-en-la-recta",
+        "valor-absoluto",
+        "desigualdades-en-la-recta"
+      ]
+    },
+    {
+      "id": "algebra-factorizacion",
+      "title": "Productos notables y factorización",
+      "lessonIds": [
+        "distributiva-area",
+        "factor-comun",
+        "diferencia-de-cuadrados",
+        "trinomio-cuadrado-perfecto",
+        "factorizar-trinomios"
+      ]
+    },
+    {
+      "id": "ecuaciones-potencias",
+      "title": "Ecuaciones y potencias",
+      "lessonIds": ["resolver-ecuaciones-simples", "leyes-de-exponentes"]
+    }
+  ]
+}

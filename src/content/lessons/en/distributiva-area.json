@@ -1,0 +1,88 @@
+{
+  "id": "distributiva-area",
+  "title": "Multiplying sums with areas",
+  "unitId": "algebra-factorizacion",
+  "order": 0,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Seeing (x+3)(x+2) as the area of a rectangle makes it almost obvious.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Multiplying two sums looks messy, but it's just the $area$ of a rectangle split into pieces. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "modelo",
+      "widget": "area-model",
+      "props": {
+        "top": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "side": [{ "label": "x", "size": 3 }, { "label": "2", "size": 2 }],
+        "cells": [["x²", "3x"], ["2x", "6"]]
+      },
+      "caption": "A rectangle of $(x+3)$ by $(x+2)$, split into four pieces."
+    },
+    {
+      "type": "question",
+      "id": "pieza-esquina",
+      "variant": "multiple-choice",
+      "prompt": "The top-left piece is $x$ by $x$. What is its area?",
+      "choices": [
+        { "id": "a", "text": "$x^2$" },
+        { "id": "b", "text": "$2x$" },
+        { "id": "c", "text": "$x$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! Side times side: $x \\cdot x = x^2$.",
+        "incorrect": "A rectangle's area is side times side. Here both sides are $x$."
+      },
+      "hints": ["Area = one side times the other.", "$x \\cdot x = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "The total area is the sum of the four pieces: $x^2 + 3x + 2x + 6$. Multiplying sums is just sharing out the area."
+    },
+    {
+      "type": "question",
+      "id": "junta-terminos",
+      "variant": "multiple-choice",
+      "prompt": "Combine like terms: $x^2 + 3x + 2x + 6$ is…",
+      "choices": [
+        { "id": "a", "text": "$x^2 + 5x + 6$" },
+        { "id": "b", "text": "$x^2 + 6x + 6$" },
+        { "id": "c", "text": "$x^2 + 6$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Perfect! $3x + 2x = 5x$, so it's $x^2 + 5x + 6$.",
+        "incorrect": "Only the $x$ terms combine: $3x + 2x$. The rest stay as they are."
+      },
+      "hints": ["$3x$ and $2x$ can be combined.", "$3x + 2x = 5x$; the $x^2$ and the $6$ stay put."]
+    },
+    {
+      "type": "question",
+      "id": "transfiere",
+      "variant": "multiple-choice",
+      "prompt": "Without drawing, in $(x+1)(x+4)$, what does the middle term (the $x$ terms) add up to?",
+      "choices": [
+        { "id": "a", "text": "$5x$" },
+        { "id": "b", "text": "$4x$" },
+        { "id": "c", "text": "$5$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Great! The middle pieces are $1x$ and $4x$: together, $5x$.",
+        "incorrect": "The middle is the two rectangular pieces: $1 \\cdot x$ and $4 \\cdot x$. Add them."
+      },
+      "hints": ["They're the 'mixed' pieces: number times $x$.", "$1x + 4x = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Multiplying $(a+b)(c+d)$ is sharing an area into four. With that picture, no term slips past you. 🎉"
+    }
+  ]
+}

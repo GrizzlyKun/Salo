@@ -1,0 +1,90 @@
+{
+  "id": "factorizar-trinomios",
+  "title": "Factorizar trinomios",
+  "unitId": "algebra-factorizacion",
+  "order": 4,
+  "xp": 25,
+  "durationMinutes": 5,
+  "summary": "El camino de vuelta: de x²+5x+6 a (x+2)(x+3), buscando dos números.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Ya sabes armar el área. Ahora al revés: te dan el trinomio y buscas el $rectángulo$ que lo forma. ✨"
+    },
+    {
+      "type": "widget",
+      "id": "modelo",
+      "widget": "area-model",
+      "props": {
+        "top": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "side": [{ "label": "x", "size": 3 }, { "label": "2", "size": 2 }],
+        "cells": [["x²", "3x"], ["2x", "6"]]
+      },
+      "caption": "Este rectángulo tiene área $x^2 + 5x + 6$. ¿Qué lados tiene?"
+    },
+    {
+      "type": "question",
+      "id": "dos-numeros",
+      "variant": "multiple-choice",
+      "prompt": "Para factorizar $x^2 + 5x + 6$ busco dos números que multiplicados den $6$ y sumados den $5$. ¿Cuáles son?",
+      "choices": [
+        { "id": "a", "text": "$2$ y $3$" },
+        { "id": "b", "text": "$1$ y $6$" },
+        { "id": "c", "text": "$2$ y $4$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! $2 \\cdot 3 = 6$ y $2 + 3 = 5$. Justo lo que pedía.",
+        "incorrect": "Necesitas las DOS cosas a la vez: que multipliquen $6$ y sumen $5$. Prueba cada par."
+      },
+      "hints": ["Lista los pares que multiplican $6$: $1\\cdot 6$ y $2\\cdot 3$.", "De esos, ¿cuál suma $5$?"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "Esos dos números son los lados que faltan: $x^2 + 5x + 6 = (x+2)(x+3)$. Multiplican al término de abajo y suman al del medio."
+    },
+    {
+      "type": "question",
+      "id": "factoriza-12",
+      "variant": "multiple-choice",
+      "templateId": "factorizar-trinomio",
+      "prompt": "Factoriza $x^2 + 7x + 12$.",
+      "choices": [
+        { "id": "a", "text": "$(x+3)(x+4)$" },
+        { "id": "b", "text": "$(x+2)(x+6)$" },
+        { "id": "c", "text": "$(x+1)(x+12)$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Perfecto! $3 \\cdot 4 = 12$ y $3 + 4 = 7$.",
+        "incorrect": "Los otros pares también multiplican $12$, pero fíjate en cuál SUMA $7$."
+      },
+      "hints": ["Pares que dan $12$: $2\\cdot 6$, $3\\cdot 4$, $1\\cdot 12$.", "¿Cuál de esos pares suma $7$?"]
+    },
+    {
+      "type": "question",
+      "id": "factoriza-4",
+      "variant": "multiple-choice",
+      "templateId": "factorizar-trinomio",
+      "prompt": "Factoriza $x^2 + 5x + 4$.",
+      "choices": [
+        { "id": "a", "text": "$(x+1)(x+4)$" },
+        { "id": "b", "text": "$(x+2)(x+2)$" },
+        { "id": "c", "text": "$(x+4)(x+4)$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Sí! $1 \\cdot 4 = 4$ y $1 + 4 = 5$.",
+        "incorrect": "$(x+2)(x+2)$ multiplica $4$ pero suma $4$, no $5$. Busca el par correcto."
+      },
+      "hints": ["Necesitas multiplicar $4$ y sumar $5$.", "Prueba $1$ y $4$: ¿cumplen las dos cosas?"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Factorizar un trinomio es un juego de dos pistas: multiplicar y sumar. Con práctica lo verás de un vistazo. 🎉"
+    }
+  ]
+}

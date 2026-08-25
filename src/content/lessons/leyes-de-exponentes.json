@@ -1,0 +1,82 @@
+{
+  "id": "leyes-de-exponentes",
+  "title": "Leyes de los exponentes",
+  "unitId": "ecuaciones-potencias",
+  "order": 1,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Multiplicar potencias suma exponentes; elevar una potencia los multiplica.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Una potencia es una multiplicación repetida: $2^3 = 2 \\cdot 2 \\cdot 2$. Con eso salen unos atajos muy útiles. ✨"
+    },
+    {
+      "type": "question",
+      "id": "producto-num",
+      "variant": "multiple-choice",
+      "prompt": "¿A cuánto equivale $2^2 \\cdot 2^3$?",
+      "choices": [
+        { "id": "a", "text": "$2^5$" },
+        { "id": "b", "text": "$2^6$" },
+        { "id": "c", "text": "$4^5$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Sí! Son $(2\\cdot 2)(2\\cdot 2\\cdot 2)$: cinco doses multiplicados, $2^5$.",
+        "incorrect": "Cuenta cuántos doses se multiplican en total. La base no cambia."
+      },
+      "hints": ["Escribe cada potencia como multiplicación y cuenta los factores.", "$2$ y $3$ doses: ¿cuántos en total?"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja-producto",
+      "text": "Ahí está la primera ley: al multiplicar potencias de la MISMA base, se SUMAN los exponentes: $x^a \\cdot x^b = x^{a+b}$."
+    },
+    {
+      "type": "question",
+      "id": "producto-var",
+      "variant": "multiple-choice",
+      "prompt": "¿Cuánto es $x^4 \\cdot x^3$?",
+      "choices": [
+        { "id": "a", "text": "$x^7$" },
+        { "id": "b", "text": "$x^{12}$" },
+        { "id": "c", "text": "$x^1$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! $4 + 3 = 7$, así que $x^7$.",
+        "incorrect": "Misma base: se suman los exponentes, no se multiplican. $4 + 3 = ?$"
+      },
+      "hints": ["¿Sumar o multiplicar los exponentes?", "$4 + 3 = 7$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja-potencia",
+      "text": "Segunda ley: elevar una potencia a otra potencia MULTIPLICA los exponentes: $(x^a)^b = x^{a\\,b}$, porque repites la base $a \\cdot b$ veces."
+    },
+    {
+      "type": "question",
+      "id": "potencia-de-potencia",
+      "variant": "multiple-choice",
+      "prompt": "¿Cuánto es $(x^3)^2$?",
+      "choices": [
+        { "id": "a", "text": "$x^6$" },
+        { "id": "b", "text": "$x^5$" },
+        { "id": "c", "text": "$x^9$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Perfecto! $(x^3)^2 = x^3 \\cdot x^3 = x^6$: se multiplican, $3 \\cdot 2$.",
+        "incorrect": "Aquí NO se suman: una potencia elevada a otra multiplica los exponentes."
+      },
+      "hints": ["$(x^3)^2$ es $x^3$ dos veces multiplicado.", "$3 \\cdot 2 = 6$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Dos atajos que se confunden mucho: multiplicar potencias SUMA, elevar una potencia MULTIPLICA. 🎉"
+    }
+  ]
+}

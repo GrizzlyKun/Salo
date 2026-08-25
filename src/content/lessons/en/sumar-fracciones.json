@@ -1,0 +1,81 @@
+{
+  "id": "sumar-fracciones",
+  "title": "Adding fractions",
+  "unitId": "fracciones",
+  "order": 0,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "To add, first make the denominators match; then add the tops.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "You can't add quarters and halves directly, just like you don't add apples and oranges... until you put them in the same units. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "recta",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "labels": { "0": "0", "0.25": "1/4", "0.5": "2/4", "0.75": "3/4", "1": "4/4" }
+      },
+      "caption": "Everything in quarters: so $\\frac{1}{2}$ shows up as $\\frac{2}{4}$."
+    },
+    {
+      "type": "question",
+      "id": "convierte",
+      "variant": "multiple-choice",
+      "prompt": "To add $\\frac{1}{2} + \\frac{1}{4}$, first write $\\frac{1}{2}$ in quarters. What is it?",
+      "choices": [
+        { "id": "a", "text": "$\\frac{2}{4}$" },
+        { "id": "b", "text": "$\\frac{1}{4}$" },
+        { "id": "c", "text": "$\\frac{4}{2}$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! Multiply top and bottom by $2$: $\\frac{1}{2} = \\frac{2}{4}$.",
+        "incorrect": "Find how many quarters make half a unit. On the line, $\\frac{1}{2}$ lands on $\\frac{2}{4}$."
+      },
+      "hints": ["How many quarters make half a unit?"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "With the same denominator, adding is easy: just add the numerators and keep the denominator the same."
+    },
+    {
+      "type": "question",
+      "id": "suma1",
+      "variant": "numeric-input",
+      "prompt": "Compute $\\frac{1}{2} + \\frac{1}{4}$ (as a fraction or decimal).",
+      "answer": "3/4",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! $\\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4}$.",
+        "incorrect": "Convert $\\frac{1}{2}$ to quarters and add the numerators."
+      },
+      "hints": ["$\\frac{1}{2} = \\frac{2}{4}$.", "$\\frac{2}{4} + \\frac{1}{4} = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "suma2",
+      "variant": "numeric-input",
+      "prompt": "Compute $\\frac{1}{3} + \\frac{1}{6}$.",
+      "answer": "1/2",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Great! $\\frac{1}{3} = \\frac{2}{6}$, so $\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}$.",
+        "incorrect": "Turn everything into sixths: $\\frac{1}{3}$ is $\\frac{2}{6}$."
+      },
+      "hints": ["The common denominator is $6$.", "$\\frac{1}{3} = \\frac{2}{6}$; now add."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "The golden rule: same denominator before adding. After that, the numerators add themselves. 🎉"
+    }
+  ]
+}

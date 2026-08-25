@@ -1,0 +1,90 @@
+{
+  "id": "fracciones-en-la-recta",
+  "title": "Fractions on the line",
+  "unitId": "recta-numerica",
+  "order": 2,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Place fractions on the line and discover which ones are worth the same.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "intro",
+      "text": "A fraction isn't just two numbers: it's a $place$ on the line. $\\frac{1}{2}$ lives exactly halfway between $0$ and $1$."
+    },
+    {
+      "type": "widget",
+      "id": "demo",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "labels": { "0": "0", "0.25": "1/4", "0.5": "1/2", "0.75": "3/4", "1": "1" },
+        "points": [{ "value": 0.5, "label": "1/2", "color": "#3EC6C9" }]
+      },
+      "caption": "The line from $0$ to $1$ split into quarters."
+    },
+    {
+      "type": "question",
+      "id": "coloca-tres-cuartos",
+      "variant": "manipulative",
+      "prompt": "Place the marker on $\\frac{3}{4}$.",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "labels": { "0": "0", "0.25": "1/4", "0.5": "1/2", "0.75": "3/4", "1": "1" },
+        "interactive": true,
+        "initial": 0
+      },
+      "answer": "0.75",
+      "feedback": {
+        "correct": "There it is! $\\frac{3}{4}$ is three quarters: three steps of $\\frac{1}{4}$ from $0$.",
+        "incorrect": "Count quarters from $0$: one, two, three. Where do you land?"
+      },
+      "hints": ["$\\frac{3}{4}$ means three parts out of four.", "Use the arrow keys or tap a mark."]
+    },
+    {
+      "type": "exposition",
+      "id": "equivalentes",
+      "text": "Here's the beautiful part: $\\frac{2}{4}$ lands on the SAME point as $\\frac{1}{2}$. They are $equivalent$ fractions: different name, same place."
+    },
+    {
+      "type": "question",
+      "id": "equivalente-mitad",
+      "variant": "multiple-choice",
+      "prompt": "Which of these is worth the same as $\\frac{1}{2}$?",
+      "choices": [
+        { "id": "a", "text": "$\\frac{2}{4}$" },
+        { "id": "b", "text": "$\\frac{1}{4}$" },
+        { "id": "c", "text": "$\\frac{2}{3}$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! Multiply top and bottom by $2$: $\\frac{1}{2} = \\frac{2}{4}$.",
+        "incorrect": "Look for the one that lands on the same point as $\\frac{1}{2}$ on the line."
+      },
+      "hints": ["If you split each half in two, how many pieces up to the middle?"]
+    },
+    {
+      "type": "question",
+      "id": "suma-cuartos",
+      "variant": "numeric-input",
+      "prompt": "What is $\\frac{1}{4} + \\frac{1}{2}$? (write it as a decimal or fraction)",
+      "answer": "3/4",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Great! $\\frac{1}{2} = \\frac{2}{4}$, so $\\frac{1}{4}+\\frac{2}{4} = \\frac{3}{4}$.",
+        "incorrect": "Convert $\\frac{1}{2}$ to quarters and add the numerators."
+      },
+      "hints": ["$\\frac{1}{2}$ is $\\frac{2}{4}$.", "$\\frac{1}{4} + \\frac{2}{4} = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Seeing fractions as places on the line makes comparing and adding almost visual. You'll come back here often. 🎉"
+    }
+  ]
+}

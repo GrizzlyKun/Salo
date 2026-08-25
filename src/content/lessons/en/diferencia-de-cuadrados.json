@@ -1,0 +1,93 @@
+{
+  "id": "diferencia-de-cuadrados",
+  "title": "The difference of squares",
+  "unitId": "algebra-factorizacion",
+  "order": 2,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Discover why a² − b² turns into (a+b)(a−b).",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "intro",
+      "text": "Some patterns show up again and again in algebra. Today you'll see one that looks like magic, but you can $see$ it with your hands."
+    },
+    {
+      "type": "exposition",
+      "id": "idea",
+      "text": "Picture a big square of side $a$ and cut a small square of side $b$ out of one corner. The area left over is $a^2 - b^2$."
+    },
+    {
+      "type": "widget",
+      "id": "demo",
+      "widget": "square-difference",
+      "props": { "a": 6, "b": 3 },
+      "caption": "Move $a$ and $b$, then tap to rearrange the figure into a rectangle."
+    },
+    {
+      "type": "question",
+      "id": "que-rectangulo",
+      "variant": "multiple-choice",
+      "prompt": "When you rearrange the figure into a rectangle, what are its sides?",
+      "choices": [
+        { "id": "suma-suma", "text": "$(a+b)$ and $(a+b)$" },
+        { "id": "suma-resta", "text": "$(a+b)$ and $(a-b)$" },
+        { "id": "resta-resta", "text": "$(a-b)$ and $(a-b)$" }
+      ],
+      "answerId": "suma-resta",
+      "feedback": {
+        "correct": "That's it! The area didn't change: $a^2-b^2$ is the same as $(a+b)(a-b)$.",
+        "incorrect": "Look at the rectangle: one side stretches to $a+b$ and the other shrinks to $a-b$."
+      },
+      "hints": [
+        "Count how long the long side of the rearranged rectangle is.",
+        "The long side adds the two pieces: $a$ and $b$."
+      ]
+    },
+    {
+      "type": "exposition",
+      "id": "formula",
+      "text": "You just discovered the identity: $a^2 - b^2 = (a+b)(a-b)$. It works both ways: to factor or to expand."
+    },
+    {
+      "type": "question",
+      "id": "calcula-7-3",
+      "variant": "numeric-input",
+      "templateId": "eval-diferencia-cuadrados",
+      "prompt": "Use the shortcut to compute $7^2 - 3^2$ without squaring. What do you get?",
+      "answer": "(7+3)*(7-3)",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! $(7+3)(7-3) = 10 \\cdot 4 = 40$.",
+        "incorrect": "Multiply the sum by the difference: $(7+3)$ times $(7-3)$."
+      },
+      "hints": [
+        "Don't compute $49-9$; use $(a+b)(a-b)$.",
+        "$a=7$ and $b=3$, so it's $10 \\cdot 4$."
+      ]
+    },
+    {
+      "type": "question",
+      "id": "factoriza",
+      "variant": "multiple-choice",
+      "templateId": "factorizar-diferencia-cuadrados",
+      "prompt": "How do you factor $x^2 - 25$?",
+      "choices": [
+        { "id": "a", "text": "$(x-5)^2$" },
+        { "id": "b", "text": "$(x+5)(x-5)$" },
+        { "id": "c", "text": "$(x+25)(x-1)$" }
+      ],
+      "answerId": "b",
+      "feedback": {
+        "correct": "Yes! Since $25 = 5^2$, it's a difference of squares: $(x+5)(x-5)$.",
+        "incorrect": "Think what number squared gives $25$. That's your $b$."
+      },
+      "hints": ["What is $b$ if $b^2 = 25$?"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Now you have a powerful tool: whenever you see $\\text{something}^2 - \\text{something}^2$, you know it splits into $(\\;+\\;)(\\;-\\;)$. 🎉"
+    }
+  ]
+}

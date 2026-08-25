@@ -1,0 +1,103 @@
+{
+  "id": "valor-absoluto",
+  "title": "Valor absoluto: distancia al cero",
+  "unitId": "recta-numerica",
+  "order": 3,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "El valor absoluto mide qué tan lejos estás del cero, sin importar el lado.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "De tu casa al cole hay $3$ calles. ¿Y del cole a tu casa? También $3$. La distancia no sabe de direcciones. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": {
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "points": [
+          { "value": -3, "label": "-3", "color": "#FF7A6B" },
+          { "value": 3, "label": "3", "color": "#3EC6C9" }
+        ]
+      },
+      "caption": "Tanto $-3$ como $3$ están a $3$ pasos del cero."
+    },
+    {
+      "type": "question",
+      "id": "abs-menos-4",
+      "variant": "multiple-choice",
+      "prompt": "El valor absoluto $|-4|$ es la distancia de $-4$ al cero. ¿Cuánto vale?",
+      "choices": [
+        { "id": "a", "text": "$4$" },
+        { "id": "b", "text": "$-4$" },
+        { "id": "c", "text": "$0$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! $-4$ está a $4$ pasos del cero, así que $|-4| = 4$.",
+        "incorrect": "Una distancia nunca es negativa. ¿Cuántos pasos hay de $-4$ al $0$?"
+      },
+      "hints": ["Piensa en pasos, no en el signo.", "La distancia siempre es positiva (o cero)."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "Esa es la clave: $|x|$ es la distancia de $x$ al $0$. Por eso nunca es negativo, pase lo que pase con $x$."
+    },
+    {
+      "type": "question",
+      "id": "quienes-cumplen",
+      "variant": "multiple-choice",
+      "prompt": "¿Qué números cumplen $|x| = 3$?",
+      "choices": [
+        { "id": "a", "text": "Solo $3$" },
+        { "id": "b", "text": "Solo $-3$" },
+        { "id": "c", "text": "Tanto $3$ como $-3$" }
+      ],
+      "answerId": "c",
+      "feedback": {
+        "correct": "¡Sí! Hay dos puntos a distancia $3$ del cero: uno a cada lado.",
+        "incorrect": "Busca en la recta TODOS los puntos que están a $3$ pasos del cero. ¿Cuántos hay?"
+      },
+      "hints": ["¿Solo hay un punto a distancia $3$ del cero?", "Mira a la izquierda y a la derecha del cero."]
+    },
+    {
+      "type": "widget",
+      "id": "explora-distancia",
+      "widget": "number-line",
+      "props": {
+        "min": -4,
+        "max": 4,
+        "step": 1,
+        "points": [
+          { "value": -2, "label": "-2", "color": "#FF7A6B" },
+          { "value": 3, "label": "3", "color": "#3EC6C9" }
+        ]
+      },
+      "caption": "¿Cuántos pasos hay entre $-2$ y $3$?"
+    },
+    {
+      "type": "question",
+      "id": "distancia-entre",
+      "variant": "numeric-input",
+      "prompt": "¿Qué distancia hay entre $-2$ y $3$ en la recta?",
+      "answer": "5",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Perfecto! De $-2$ a $0$ hay $2$, y de $0$ a $3$ hay $3$: en total $5$.",
+        "incorrect": "Cuenta los pasos pasando por el cero: primero hasta el $0$, luego hasta el $3$."
+      },
+      "hints": ["Cuenta los pasos de $-2$ a $3$ uno a uno.", "Son los pasos de $-2$ al $0$ más los del $0$ al $3$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Valor absoluto = distancia. Con esa idea, restar posiciones te da siempre cuánto hay entre ellas. 🎉"
+    }
+  ]
+}

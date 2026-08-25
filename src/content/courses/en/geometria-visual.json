@@ -1,0 +1,16 @@
+{
+  "id": "geometria-visual",
+  "title": "Visual geometry",
+  "units": [
+    {
+      "id": "areas",
+      "title": "Areas",
+      "lessonIds": ["area-del-rectangulo", "area-del-triangulo"]
+    },
+    {
+      "id": "triangulos",
+      "title": "Triangles",
+      "lessonIds": ["teorema-de-pitagoras"]
+    }
+  ]
+}

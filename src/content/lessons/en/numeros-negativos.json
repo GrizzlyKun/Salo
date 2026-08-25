@@ -1,0 +1,77 @@
+{
+  "id": "numeros-negativos",
+  "title": "Negative numbers",
+  "unitId": "recta-numerica",
+  "order": 0,
+  "xp": 15,
+  "durationMinutes": 3,
+  "summary": "What lives to the left of zero, and why −5 is less than −2.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Can something be $less$ than nothing? On a winter thermometer, yes: $-3$ degrees is colder than $0$. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": { "min": -5, "max": 5, "step": 1, "points": [{ "value": 0, "label": "0", "color": "#3EC6C9" }] },
+      "caption": "To the right of $0$, the usual numbers. To the left, the negatives."
+    },
+    {
+      "type": "question",
+      "id": "coloca-menos-3",
+      "variant": "manipulative",
+      "prompt": "Place the marker on $-3$.",
+      "widget": "number-line",
+      "props": { "min": -5, "max": 5, "step": 1, "interactive": true, "initial": 0 },
+      "answer": "-3",
+      "feedback": {
+        "correct": "There it is! $-3$ is three steps to the left of zero.",
+        "incorrect": "Negatives live to the left of $0$. Count three steps that way."
+      },
+      "hints": ["Which side of $0$ do negatives live on?", "Three steps left from $0$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "On the line, further to the left means $smaller$. That's why $-5$ is below $-2$: the colder it gets, the smaller the number."
+    },
+    {
+      "type": "question",
+      "id": "menor-negativo",
+      "variant": "multiple-choice",
+      "prompt": "Which number is the $smallest$?",
+      "choices": [
+        { "id": "a", "text": "$-5$" },
+        { "id": "b", "text": "$-2$" },
+        { "id": "c", "text": "$0$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! $-5$ is furthest to the left, so it's the smallest.",
+        "incorrect": "Careful: with negatives, the one that looks 'bigger' is actually smaller. Which is furthest left?"
+      },
+      "hints": ["Don't trust the size of the digits, look at the position.", "The smallest is the one furthest left on the line."]
+    },
+    {
+      "type": "question",
+      "id": "dos-a-la-izquierda",
+      "variant": "numeric-input",
+      "prompt": "If you start at $1$ and take $3$ steps to the left, what number do you land on?",
+      "answer": "-2",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! $1 \\to 0 \\to -1 \\to -2$. You crossed zero without fear.",
+        "incorrect": "Count down one at a time to the left from $1$, and don't stop at $0$."
+      },
+      "hints": ["Each step left subtracts $1$.", "From $1$: $0$, then $-1$, then…"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Now you have the whole line, not just half. Negatives are positions, just as real as the positives. 🎉"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# Configuración de despliegue en Netlify para Lumen (PWA estática con Vite).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# La app navega por estado (sin rutas de servidor). Este fallback asegura que
+# cualquier URL sirva el index; los archivos existentes (assets, sw.js,
+# manifest) se sirven directos y no pasan por aquí.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# El service worker no debe cachearse en el CDN (para que las actualizaciones
+# lleguen); los assets con hash sí, de forma agresiva.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"

@@ -1,0 +1,89 @@
+{
+  "id": "trinomio-cuadrado-perfecto",
+  "title": "El cuadrado de una suma",
+  "unitId": "algebra-factorizacion",
+  "order": 3,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Por qué (x+3)² no es x²+9, contado con un cuadrado partido en piezas.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "Trampa clásica: mucha gente cree que $(x+3)^2 = x^2 + 9$. Vamos a ver con las piezas por qué falta algo. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "modelo",
+      "widget": "area-model",
+      "props": {
+        "top": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "side": [{ "label": "x", "size": 3 }, { "label": "3", "size": 3 }],
+        "cells": [["x²", "3x"], ["3x", "9"]]
+      },
+      "caption": "Un cuadrado de lado $(x+3)$. Fíjate: son cuatro piezas, no dos."
+    },
+    {
+      "type": "question",
+      "id": "que-falta",
+      "variant": "multiple-choice",
+      "prompt": "Además del $x^2$ y el $9$, ¿qué otras piezas aparecen?",
+      "choices": [
+        { "id": "a", "text": "Dos rectángulos de $3x$" },
+        { "id": "b", "text": "Nada más" },
+        { "id": "c", "text": "Un solo $x$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Eso es! Esas dos piezas de $3x$ son justo lo que la gente olvida.",
+        "incorrect": "Cuenta las piezas del dibujo: hay cuatro, no dos. ¿Qué hay entre el $x^2$ y el $9$?"
+      },
+      "hints": ["El cuadrado tiene cuatro piezas.", "Las dos piezas 'mezcladas' miden $3x$ cada una."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "Por eso $(a+b)^2 = a^2 + 2ab + b^2$. Ese $2ab$ son las dos piezas rectangulares que faltaban."
+    },
+    {
+      "type": "question",
+      "id": "desarrolla",
+      "variant": "multiple-choice",
+      "templateId": "binomio-cuadrado-perfecto",
+      "prompt": "Entonces, ¿cuánto es $(x+3)^2$?",
+      "choices": [
+        { "id": "a", "text": "$x^2 + 6x + 9$" },
+        { "id": "b", "text": "$x^2 + 9$" },
+        { "id": "c", "text": "$x^2 + 3x + 9$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Perfecto! Las dos piezas de $3x$ suman $6x$: $x^2 + 6x + 9$.",
+        "incorrect": "No olvides las dos piezas del medio: $3x + 3x = 6x$."
+      },
+      "hints": ["Suma las dos piezas de $3x$.", "$x^2 + 3x + 3x + 9$."]
+    },
+    {
+      "type": "question",
+      "id": "transfiere",
+      "variant": "multiple-choice",
+      "prompt": "En $(x+5)^2$, ¿cuál es el término del medio?",
+      "choices": [
+        { "id": "a", "text": "$10x$" },
+        { "id": "b", "text": "$5x$" },
+        { "id": "c", "text": "$25$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Sí! Son dos piezas de $5x$: en total $10x$ (el $2ab$ con $a=x$, $b=5$).",
+        "incorrect": "El término del medio es $2ab$: dos veces $5 \\cdot x$."
+      },
+      "hints": ["Hay dos piezas iguales de $5x$.", "$2 \\cdot 5 \\cdot x = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Al cuadrado de una suma nunca le falta el medio. Recuerda el cuadrado de cuatro piezas y no caerás en la trampa. 🎉"
+    }
+  ]
+}

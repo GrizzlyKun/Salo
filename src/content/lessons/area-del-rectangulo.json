@@ -1,0 +1,76 @@
+{
+  "id": "area-del-rectangulo",
+  "title": "Área del rectángulo",
+  "unitId": "areas",
+  "order": 0,
+  "xp": 15,
+  "durationMinutes": 3,
+  "summary": "Cuenta los cuadrados... o multiplica base por altura y ahórratelos.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "¿Cuántas baldosas cuadradas caben en el suelo? Esa cuenta es el área. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "rejilla",
+      "widget": "geo-figure",
+      "props": { "shape": "rectangle", "a": 4, "b": 3, "grid": true },
+      "caption": "Un rectángulo de $4$ por $3$, dividido en cuadrados de lado $1$."
+    },
+    {
+      "type": "question",
+      "id": "cuenta",
+      "variant": "numeric-input",
+      "prompt": "¿Cuántos cuadrados unidad hay en total?",
+      "answer": "12",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Eso es! $4$ columnas de $3$ cuadrados: $12$ en total.",
+        "incorrect": "Cuenta por filas o columnas: $4$ de ancho por $3$ de alto."
+      },
+      "hints": ["Cuenta una fila y multiplícala por el número de filas.", "$4 \\times 3 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "No hace falta contar uno a uno: el área de un rectángulo es $\\text{base} \\times \\text{altura}$."
+    },
+    {
+      "type": "question",
+      "id": "otra",
+      "variant": "numeric-input",
+      "prompt": "¿Cuál es el área de un rectángulo de base $7$ y altura $3$?",
+      "answer": "21",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Perfecto! $7 \\times 3 = 21$.",
+        "incorrect": "Multiplica base por altura: $7 \\times 3$."
+      },
+      "hints": ["Área $=$ base $\\times$ altura.", "$7 \\times 3 = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "inversa",
+      "variant": "multiple-choice",
+      "prompt": "Un rectángulo tiene área $12$ y base $4$. ¿Cuál es su altura?",
+      "choices": [
+        { "id": "a", "text": "$3$" },
+        { "id": "b", "text": "$8$" },
+        { "id": "c", "text": "$48$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Sí! Si base $\\times$ altura $= 12$ y la base es $4$, la altura es $12 \\div 4 = 3$.",
+        "incorrect": "Deshaz la multiplicación: divide el área entre la base."
+      },
+      "hints": ["$\\text{base} \\times \\text{altura} = \\text{área}$.", "$12 \\div 4 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Base por altura: una fórmula que sale de simplemente contar cuadrados. 🎉"
+    }
+  ]
+}

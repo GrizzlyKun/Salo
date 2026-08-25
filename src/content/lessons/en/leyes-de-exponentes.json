@@ -1,0 +1,82 @@
+{
+  "id": "leyes-de-exponentes",
+  "title": "Laws of exponents",
+  "unitId": "ecuaciones-potencias",
+  "order": 1,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Multiplying powers adds exponents; raising a power multiplies them.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "A power is repeated multiplication: $2^3 = 2 \\cdot 2 \\cdot 2$. From that, some very handy shortcuts appear. ✨"
+    },
+    {
+      "type": "question",
+      "id": "producto-num",
+      "variant": "multiple-choice",
+      "prompt": "What does $2^2 \\cdot 2^3$ equal?",
+      "choices": [
+        { "id": "a", "text": "$2^5$" },
+        { "id": "b", "text": "$2^6$" },
+        { "id": "c", "text": "$4^5$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! It's $(2\\cdot 2)(2\\cdot 2\\cdot 2)$: five twos multiplied, $2^5$.",
+        "incorrect": "Count how many twos are multiplied in total. The base doesn't change."
+      },
+      "hints": ["Write each power as a multiplication and count the factors.", "$2$ twos and $3$ twos: how many altogether?"]
+    },
+    {
+      "type": "exposition",
+      "id": "aja-producto",
+      "text": "There's the first law: when multiplying powers with the SAME base, ADD the exponents: $x^a \\cdot x^b = x^{a+b}$."
+    },
+    {
+      "type": "question",
+      "id": "producto-var",
+      "variant": "multiple-choice",
+      "prompt": "What is $x^4 \\cdot x^3$?",
+      "choices": [
+        { "id": "a", "text": "$x^7$" },
+        { "id": "b", "text": "$x^{12}$" },
+        { "id": "c", "text": "$x^1$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! $4 + 3 = 7$, so $x^7$.",
+        "incorrect": "Same base: add the exponents, don't multiply them. $4 + 3 = ?$"
+      },
+      "hints": ["Add or multiply the exponents?", "$4 + 3 = 7$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja-potencia",
+      "text": "Second law: raising a power to another power MULTIPLIES the exponents: $(x^a)^b = x^{a\\,b}$, because you repeat the base $a \\cdot b$ times."
+    },
+    {
+      "type": "question",
+      "id": "potencia-de-potencia",
+      "variant": "multiple-choice",
+      "prompt": "What is $(x^3)^2$?",
+      "choices": [
+        { "id": "a", "text": "$x^6$" },
+        { "id": "b", "text": "$x^5$" },
+        { "id": "c", "text": "$x^9$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Perfect! $(x^3)^2 = x^3 \\cdot x^3 = x^6$: they multiply, $3 \\cdot 2$.",
+        "incorrect": "Here you do NOT add: a power raised to another multiplies the exponents."
+      },
+      "hints": ["$(x^3)^2$ is $x^3$ multiplied twice.", "$3 \\cdot 2 = 6$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Two shortcuts that get mixed up a lot: multiplying powers ADDS, raising a power MULTIPLIES. 🎉"
+    }
+  ]
+}

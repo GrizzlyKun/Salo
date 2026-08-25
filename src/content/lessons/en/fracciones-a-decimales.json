@@ -1,0 +1,77 @@
+{
+  "id": "fracciones-a-decimales",
+  "title": "From fraction to decimal",
+  "unitId": "fracciones",
+  "order": 1,
+  "xp": 15,
+  "durationMinutes": 3,
+  "summary": "A fraction is a division: divide top by bottom and out comes the decimal.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "A fraction is a division in disguise: $\\frac{1}{4}$ means '$1$ divided by $4$'. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "recta",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "labels": { "0": "0", "0.25": "0.25", "0.5": "0.5", "0.75": "0.75", "1": "1" }
+      },
+      "caption": "Each quarter advances $0.25$ on the decimal line."
+    },
+    {
+      "type": "question",
+      "id": "un-cuarto",
+      "variant": "numeric-input",
+      "prompt": "What decimal is $\\frac{1}{4}$?",
+      "answer": "0.25",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "That's it! $1 \\div 4 = 0.25$.",
+        "incorrect": "Divide $1$ by $4$. On the line, $\\frac{1}{4}$ lands on $0.25$."
+      },
+      "hints": ["It's $1 \\div 4$.", "A quarter of $1$ is $0.25$."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "The method always works: divide the numerator by the denominator and you get the decimal."
+    },
+    {
+      "type": "question",
+      "id": "tres-cuartos",
+      "variant": "numeric-input",
+      "prompt": "What decimal is $\\frac{3}{4}$?",
+      "answer": "0.75",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! $3 \\div 4 = 0.75$.",
+        "incorrect": "Divide $3$ by $4$: it's three quarters, three steps of $0.25$."
+      },
+      "hints": ["$3 \\div 4$.", "Three times $0.25$."]
+    },
+    {
+      "type": "question",
+      "id": "dos-quintos",
+      "variant": "numeric-input",
+      "prompt": "What decimal is $\\frac{2}{5}$?",
+      "answer": "0.4",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Great! $2 \\div 5 = 0.4$.",
+        "incorrect": "Divide $2$ by $5$. Hint: $\\frac{1}{5} = 0.2$."
+      },
+      "hints": ["$\\frac{1}{5} = 0.2$.", "$2 \\div 5 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Fraction and decimal are two languages for the same number. Dividing is the translator. 🎉"
+    }
+  ]
+}

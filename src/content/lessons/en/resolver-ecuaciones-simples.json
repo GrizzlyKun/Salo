@@ -1,0 +1,82 @@
+{
+  "id": "resolver-ecuaciones-simples",
+  "title": "Solving equations",
+  "unitId": "ecuaciones-potencias",
+  "order": 0,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Isolate the unknown by undoing what was done to it, on both sides.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "An equation is a balanced scale: what's on one side of the $=$ weighs the same as the other. ⚖️"
+    },
+    {
+      "type": "exposition",
+      "id": "idea",
+      "text": "To get $x$ alone, undo what was done to it. And whatever you do to one side, do to the other: the scale stays balanced."
+    },
+    {
+      "type": "question",
+      "id": "suma",
+      "variant": "numeric-input",
+      "prompt": "If $x + 5 = 12$, what is $x$?",
+      "answer": "7",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "That's it! Subtract $5$ from both sides: $x = 12 - 5 = 7$.",
+        "incorrect": "The $+5$ is in the way. What operation undoes it? Apply it to both sides."
+      },
+      "hints": ["The opposite of adding $5$ is subtracting $5$.", "$12 - 5 = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "que-operacion",
+      "variant": "multiple-choice",
+      "prompt": "To solve $x - 4 = 10$, what do you do to both sides?",
+      "choices": [
+        { "id": "a", "text": "Add $4$" },
+        { "id": "b", "text": "Subtract $4$" },
+        { "id": "c", "text": "Multiply by $4$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! Adding $4$ undoes the $-4$: $x = 14$.",
+        "incorrect": "Think what operation cancels the $-4$. The opposite of subtracting is adding."
+      },
+      "hints": ["What's the inverse of subtracting?"]
+    },
+    {
+      "type": "question",
+      "id": "producto",
+      "variant": "numeric-input",
+      "prompt": "If $3x = 21$, what is $x$?",
+      "answer": "7",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! Divide both sides by $3$: $x = 21 \\div 3 = 7$.",
+        "incorrect": "Here $x$ is multiplied by $3$. Undo it by dividing by $3$."
+      },
+      "hints": ["The opposite of multiplying by $3$ is dividing by $3$.", "$21 \\div 3 = ?$"]
+    },
+    {
+      "type": "question",
+      "id": "division",
+      "variant": "numeric-input",
+      "prompt": "If $\\frac{x}{2} = 6$, what is $x$?",
+      "answer": "12",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Great! Multiply both sides by $2$: $x = 12$.",
+        "incorrect": "Here $x$ is divided by $2$. Undo it by multiplying by $2$."
+      },
+      "hints": ["The opposite of dividing by $2$ is multiplying by $2$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Solving is a game of undoing: spot what was done to $x$ and apply the inverse operation to both sides. 🎉"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "factor-comun",
+  "title": "Taking out a common factor",
+  "unitId": "algebra-factorizacion",
+  "order": 1,
+  "xp": 15,
+  "durationMinutes": 3,
+  "summary": "Find what the terms share and pull it outside the parentheses.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "intro",
+      "text": "Factoring is the opposite of handing out. If $3$ multiplies everything inside, we can pull it out: $3(x+2) = 3x+6$. Today we make the return trip."
+    },
+    {
+      "type": "exposition",
+      "id": "idea",
+      "text": "The key is to find what ALL the terms share. In $6x + 9$, both are multiples of $3$."
+    },
+    {
+      "type": "question",
+      "id": "comun-6x-9",
+      "variant": "multiple-choice",
+      "prompt": "What is the greatest common factor of $6x$ and $9$?",
+      "choices": [
+        { "id": "a", "text": "$3$" },
+        { "id": "b", "text": "$6$" },
+        { "id": "c", "text": "$9$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Exactly! $6x = 3\\cdot 2x$ and $9 = 3\\cdot 3$: the $3$ is in both.",
+        "incorrect": "Look for the biggest number that divides both $6$ and $9$."
+      },
+      "hints": ["Which numbers divide $9$?", "Of those, which also divides $6$?"]
+    },
+    {
+      "type": "question",
+      "id": "factoriza-6x-9",
+      "variant": "multiple-choice",
+      "prompt": "So how does $6x + 9$ come out factored?",
+      "choices": [
+        { "id": "a", "text": "$3(2x + 3)$" },
+        { "id": "b", "text": "$3(2x + 9)$" },
+        { "id": "c", "text": "$6(x + 3)$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Yes! Pulling out the $3$: $6x\\div 3 = 2x$ and $9\\div 3 = 3$.",
+        "incorrect": "Divide each term by $3$ and put it inside the parentheses."
+      },
+      "hints": ["$6x \\div 3 = ?$ and $9 \\div 3 = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "con-letras",
+      "text": "The common factor can carry letters too. In $4x^2 + 8x$, both terms share a $4$ and an $x$."
+    },
+    {
+      "type": "question",
+      "id": "factoriza-4x2-8x",
+      "variant": "multiple-choice",
+      "prompt": "Factor $4x^2 + 8x$.",
+      "choices": [
+        { "id": "a", "text": "$4x(x + 2)$" },
+        { "id": "b", "text": "$4(x^2 + 2x)$" },
+        { "id": "c", "text": "$2x(2x + 4)$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "Perfect! $4x$ is the full common factor: $4x\\cdot x + 4x\\cdot 2$.",
+        "incorrect": "Pull out EVERYTHING they share: the biggest number and the power of $x$ in both."
+      },
+      "hints": [
+        "Which number divides both $4$ and $8$?",
+        "How many $x$ do $x^2$ and $x$ share? At least one."
+      ]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Tip: to check, multiply back out. If you get the original expression, you factored it right. 💛"
+    }
+  ]
+}

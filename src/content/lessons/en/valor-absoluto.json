@@ -1,0 +1,103 @@
+{
+  "id": "valor-absoluto",
+  "title": "Absolute value: distance to zero",
+  "unitId": "recta-numerica",
+  "order": 3,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Absolute value measures how far you are from zero, no matter the side.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "hook",
+      "text": "From your home to school is $3$ blocks. And from school back home? Also $3$. Distance doesn't care about direction. 👀"
+    },
+    {
+      "type": "widget",
+      "id": "explora",
+      "widget": "number-line",
+      "props": {
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "points": [
+          { "value": -3, "label": "-3", "color": "#FF7A6B" },
+          { "value": 3, "label": "3", "color": "#3EC6C9" }
+        ]
+      },
+      "caption": "Both $-3$ and $3$ are $3$ steps from zero."
+    },
+    {
+      "type": "question",
+      "id": "abs-menos-4",
+      "variant": "multiple-choice",
+      "prompt": "The absolute value $|-4|$ is the distance from $-4$ to zero. What is it?",
+      "choices": [
+        { "id": "a", "text": "$4$" },
+        { "id": "b", "text": "$-4$" },
+        { "id": "c", "text": "$0$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "That's it! $-4$ is $4$ steps from zero, so $|-4| = 4$.",
+        "incorrect": "A distance is never negative. How many steps from $-4$ to $0$?"
+      },
+      "hints": ["Think in steps, not signs.", "Distance is always positive (or zero)."]
+    },
+    {
+      "type": "exposition",
+      "id": "aja",
+      "text": "That's the key: $|x|$ is the distance from $x$ to $0$. That's why it's never negative, whatever happens to $x$."
+    },
+    {
+      "type": "question",
+      "id": "quienes-cumplen",
+      "variant": "multiple-choice",
+      "prompt": "Which numbers satisfy $|x| = 3$?",
+      "choices": [
+        { "id": "a", "text": "Only $3$" },
+        { "id": "b", "text": "Only $-3$" },
+        { "id": "c", "text": "Both $3$ and $-3$" }
+      ],
+      "answerId": "c",
+      "feedback": {
+        "correct": "Yes! There are two points at distance $3$ from zero: one on each side.",
+        "incorrect": "Find ALL the points that are $3$ steps from zero on the line. How many are there?"
+      },
+      "hints": ["Is there only one point at distance $3$ from zero?", "Look left and right of zero."]
+    },
+    {
+      "type": "widget",
+      "id": "explora-distancia",
+      "widget": "number-line",
+      "props": {
+        "min": -4,
+        "max": 4,
+        "step": 1,
+        "points": [
+          { "value": -2, "label": "-2", "color": "#FF7A6B" },
+          { "value": 3, "label": "3", "color": "#3EC6C9" }
+        ]
+      },
+      "caption": "How many steps between $-2$ and $3$?"
+    },
+    {
+      "type": "question",
+      "id": "distancia-entre",
+      "variant": "numeric-input",
+      "prompt": "What is the distance between $-2$ and $3$ on the line?",
+      "answer": "5",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Perfect! From $-2$ to $0$ is $2$, and from $0$ to $3$ is $3$: $5$ in total.",
+        "incorrect": "Count the steps passing through zero: first to $0$, then on to $3$."
+      },
+      "hints": ["Count the steps from $-2$ to $3$ one by one.", "It's the steps from $-2$ to $0$ plus $0$ to $3$."]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Absolute value = distance. With that idea, subtracting positions always tells you how much is between them. 🎉"
+    }
+  ]
+}

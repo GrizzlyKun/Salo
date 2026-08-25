@@ -1,0 +1,90 @@
+{
+  "id": "fracciones-en-la-recta",
+  "title": "Fracciones en la recta",
+  "unitId": "recta-numerica",
+  "order": 2,
+  "xp": 20,
+  "durationMinutes": 4,
+  "summary": "Coloca fracciones en la recta y descubre cuáles valen lo mismo.",
+  "steps": [
+    {
+      "type": "exposition",
+      "id": "intro",
+      "text": "Una fracción no es solo dos números: es un $lugar$ en la recta. $\\frac{1}{2}$ vive justo a mitad de camino entre $0$ y $1$."
+    },
+    {
+      "type": "widget",
+      "id": "demo",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "labels": { "0": "0", "0.25": "1/4", "0.5": "1/2", "0.75": "3/4", "1": "1" },
+        "points": [{ "value": 0.5, "label": "1/2", "color": "#3EC6C9" }]
+      },
+      "caption": "La recta de $0$ a $1$ partida en cuartos."
+    },
+    {
+      "type": "question",
+      "id": "coloca-tres-cuartos",
+      "variant": "manipulative",
+      "prompt": "Coloca el marcador sobre $\\frac{3}{4}$.",
+      "widget": "number-line",
+      "props": {
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "labels": { "0": "0", "0.25": "1/4", "0.5": "1/2", "0.75": "3/4", "1": "1" },
+        "interactive": true,
+        "initial": 0
+      },
+      "answer": "0.75",
+      "feedback": {
+        "correct": "¡Ahí está! $\\frac{3}{4}$ son tres cuartos: tres pasos de $\\frac{1}{4}$ desde el $0$.",
+        "incorrect": "Cuenta cuartos desde el $0$: uno, dos, tres. ¿Dónde caes?"
+      },
+      "hints": ["$\\frac{3}{4}$ significa tres partes de cuatro.", "Usa las flechas del teclado o toca una marca."]
+    },
+    {
+      "type": "exposition",
+      "id": "equivalentes",
+      "text": "Aquí está lo bonito: $\\frac{2}{4}$ cae en el MISMO punto que $\\frac{1}{2}$. Son fracciones $equivalentes$: distinto nombre, mismo lugar."
+    },
+    {
+      "type": "question",
+      "id": "equivalente-mitad",
+      "variant": "multiple-choice",
+      "prompt": "¿Cuál de estas fracciones vale lo mismo que $\\frac{1}{2}$?",
+      "choices": [
+        { "id": "a", "text": "$\\frac{2}{4}$" },
+        { "id": "b", "text": "$\\frac{1}{4}$" },
+        { "id": "c", "text": "$\\frac{2}{3}$" }
+      ],
+      "answerId": "a",
+      "feedback": {
+        "correct": "¡Sí! Multiplica arriba y abajo por $2$: $\\frac{1}{2} = \\frac{2}{4}$.",
+        "incorrect": "Busca la que cae en el mismo punto que $\\frac{1}{2}$ en la recta."
+      },
+      "hints": ["Si partes cada mitad en dos, ¿cuántos trozos hay hasta la mitad?"]
+    },
+    {
+      "type": "question",
+      "id": "suma-cuartos",
+      "variant": "numeric-input",
+      "prompt": "¿Cuánto vale $\\frac{1}{4} + \\frac{1}{2}$? (escríbelo como decimal o fracción)",
+      "answer": "3/4",
+      "tolerance": 0,
+      "feedback": {
+        "correct": "¡Genial! $\\frac{1}{2} = \\frac{2}{4}$, así que $\\frac{1}{4}+\\frac{2}{4} = \\frac{3}{4}$.",
+        "incorrect": "Convierte $\\frac{1}{2}$ a cuartos y suma los numeradores."
+      },
+      "hints": ["$\\frac{1}{2}$ son $\\frac{2}{4}$.", "$\\frac{1}{4} + \\frac{2}{4} = ?$"]
+    },
+    {
+      "type": "exposition",
+      "id": "cierre",
+      "text": "Ver las fracciones como lugares en la recta hace que comparar y sumar sea casi visual. Volverás aquí muchas veces. 🎉"
+    }
+  ]
+}
