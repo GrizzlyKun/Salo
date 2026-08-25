@@ -10,6 +10,7 @@ import { Button } from '../components/ui/Button';
 import { HomeButton } from '../components/ui/HomeButton';
 import { Mascot } from '../design-system/Mascot';
 import { randomCopy } from '../design-system/copy';
+import { playComplete } from '../design-system/sound';
 import { useT } from '../i18n/i18n';
 
 /**
@@ -193,6 +194,7 @@ function shuffle<T>(xs: readonly T[]): T[] {
 }
 
 function celebrate() {
+  playComplete();
   if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
   confetti({
     particleCount: 100,

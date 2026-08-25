@@ -9,6 +9,7 @@ import { Button } from '../components/ui/Button';
 import { FeedbackCard } from '../components/ui/FeedbackCard';
 import { HintReveal } from '../components/ui/HintReveal';
 import { randomCopy } from '../design-system/copy';
+import { playCorrect, playIncorrect } from '../design-system/sound';
 import { WidgetHost } from '../widgets/WidgetHost';
 import { isAIEnabled } from '../ai/client';
 import { getTutorHint } from '../ai/tutor';
@@ -77,7 +78,11 @@ export function QuestionView({
     if (solved || answer.trim() === '') return;
     const { correct } = checkAnswer(step, answer);
     setStatus(correct ? 'correct' : 'incorrect');
-    if (!correct) setWrongCount((n) => n + 1);
+    if (correct) playCorrect();
+    else {
+      playIncorrect();
+      setWrongCount((n) => n + 1);
+    }
     if (persist) {
       recordAnswer({
         lessonId,

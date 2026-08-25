@@ -1,10 +1,18 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Dumbbell, Flame, Infinity as InfinityIcon, Star } from 'lucide-react';
+import {
+  Dumbbell,
+  Flame,
+  Infinity as InfinityIcon,
+  Star,
+  Volume2,
+  VolumeX,
+} from 'lucide-react';
 import { useContent } from './content';
 import type { Lesson } from './engine/schema';
 import { useLessonStore, selectDuePractice } from './engine/useLessonStore';
 import { Mascot } from './design-system/Mascot';
+import { isMuted, setMuted } from './design-system/sound';
 import { Button } from './components/ui/Button';
 import { CourseMap } from './components/CourseMap';
 import { ProgressScreen } from './components/ProgressScreen';
@@ -137,7 +145,10 @@ function Home({
           </div>
         </div>
         <div className="flex flex-col items-end gap-2">
-          <LangToggle />
+          <div className="flex items-center gap-2">
+            <MuteToggle />
+            <LangToggle />
+          </div>
           <button
             onClick={onProgress}
             aria-label={t('home.viewProgress')}
@@ -192,6 +203,24 @@ function Home({
 
       <ResetButton />
     </div>
+  );
+}
+
+function MuteToggle() {
+  const t = useT();
+  const [muted, setLocalMuted] = useState(isMuted());
+  return (
+    <button
+      onClick={() => {
+        const next = !muted;
+        setMuted(next);
+        setLocalMuted(next);
+      }}
+      aria-label={muted ? t('sound.unmute') : t('sound.mute')}
+      className="grid h-8 w-8 place-items-center rounded-full bg-white text-ink/60 shadow-soft transition-colors hover:text-coral"
+    >
+      {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+    </button>
   );
 }
 
