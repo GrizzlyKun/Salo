@@ -1,5 +1,7 @@
 # Salo
 
+**Español** · [English](./README.en.md)
+
 **Aprende matemáticas resolviendo problemas. / Learn math by solving problems.**
 
 Salo es una app web de aprendizaje **activo** de matemáticas, inspirada en la
